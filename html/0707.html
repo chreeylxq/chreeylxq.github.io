@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>0707</title>
+        <script>
+            function displayDate(){
+                document.getElementById("demo").innerHTML=Date();
+            }
+            function myFunction(){
+               var x = document.getElementById("test1");
+               x.innerHTML="Hello JavaScript!";
+            }
+            function changeImage(){
+                var c =document.getElementById("myimage");
+                if(c.src.match("bulbon")){
+                    c.src="images/pic_bulboff.gif";
+                }else c.src="images/pic_bulbon.gif";
+            }
+            function changeStyle() {
+                var c = document.getElementById("test2");
+                c.style.color="pink";
+            }
+            function check() {
+                var c =document.getElementById("test3").value;
+                if(c==""||isNaN(c))
+                    alert("不是数字");
+                else alert("是数字");
+            }
+        </script>
+        <script src="0708.js"></script>
+    </head>
+    <body>
+        <h1>My first JavaScript</h1>
+        <p id="demo">This is a paragragh</p>
+        <button type="button" onclick="displayDate()">display date</button>
+        <button type="button" onclick="alert('welcome!')">click me!!!</button>
+        <p id="test1">JavaScript can change my content</p>
+        <button type="button" onclick="myFunction()">click me!</button>
+        <img id="myimage" onclick="changeImage()" src="images/pic_bulboff.gif" width="100" height="180">
+        <p id="test2">JavaScript can change the stylt of HTML</p>
+        <button type="button" onclick="changeStyle()">click me !!!</button>
+        <p>请输入数字，如果输入值不是数字，浏览器会弹出提示框。</p>
+        <input id="test3" type="text">
+        <button type="button" onclick="check()">click me!</button>
+        <script>document.write("<h1>This is a paragragh</h1>")</script>
+        <p id="test4">一个段落</p>
+        <button type="button" onclick="outter()">click me!!!</button>
+    </body>
+</html>

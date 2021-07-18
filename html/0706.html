@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="UTF-8">
+        <title>0706</title>
+        <style>
+            .visible{
+                background-color: #eee;
+                width: 200px;
+                height: 25px;
+                border: 1px dotted black;
+                overflow: visible;
+            }
+            .auto{
+                background-color: #eee;
+                width: 200px;
+                height: 25px;
+                border: 1px dotted black;
+                overflow: auto; 
+            }
+            .hidden{
+                background-color: #eee;
+                width: 200px;
+                height: 25px;
+                border: 1px dotted black;
+                overflow: hidden;
+            }
+            .thumbnalil{
+                float: left;
+                width: auto;
+                height: auto;
+                margin: 5px;
+            }
+            .center{
+                margin: auto;
+                text-align: center;
+                width: 60%;
+                border: 3px solid #73ad;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="overflowTest">
+            <p class="visible">这里的文本内容会溢出元素框。</p>
+            <p class="auto">这里的文本内容会溢出元素框。</p>
+            <p class="hidden">这里的文本内容会溢出元素框。</p>
+        </div>
+        <h3>图片库</h3>
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <img class="thumbnail" src="images/bg.jpg">
+        <p class="center">水平居中</p>
+    </body>
+</hmtl>

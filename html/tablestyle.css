@@ -1,0 +1,43 @@
+.title
+{
+	font-family: 微软雅黑;
+	font-size: 30px;
+	font-weight: bold;
+	border-bottom: 2px dashed #cccccc;
+	color: #255e95;
+}
+.tophead
+{
+	margin-top: 13px;
+}
+.tophead td
+{
+	background-color: white;
+}
+.btbg
+{
+	background: #e9faff !important;
+}
+.font-center
+{
+	text-align: center;
+}
+.titfont
+{
+	font-family: 微软雅黑;
+	font-size:16px;
+	font-weight: bold;
+	color: #255e95;
+	background: url(../imagwes/ico3.gif) no-repeat 15px center;
+	background-color: #e9faff;
+}
+.btbg1
+{
+	background: #f2fbfe !important;
+	text-align: center;
+}
+.btbg2
+{
+	background:#f3f3f3 !important;
+	text-align: center;
+}

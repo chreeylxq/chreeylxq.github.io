@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html</title>
+	<script>
+		document.createElement("myHero")
+	</script>
+	<style>
+		myHero{
+			display: block;
+			background-color: #ddd;
+			padding: 50px;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="">
+		<input type="checkbox" name="vehicle[]" value="Bike">I have a bike<br>
+		<input type="checkbox" name="vehicle[]" value="Car">I have a car<br>
+		<label for="male">Male</label>
+		<input type="radio" name="sex" value="Male"><br>
+		<label for="female">Female</label>
+		<input type="radio" name="sex" value="Female"><br>
+		<input type="submit" value="submit">
+	</form>
+	<form action="1281191134@qq.com" method="post" enctype="text/plain">
+		Name:<br>
+		<input type="text" name="name" value="Your name"><br>
+		E-mail:<br>
+		<input type="text" name="mail" value="Your mail"><br>
+		Comment:<br>
+		<input type="text" name="comment" value="Your comment" size="50"><br><br>
+		<select name="Cars">
+			<optgroup label="Swedish Cars">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+			</optgroup>
+			<optgroup label="German Cars">
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</optgroup>
+		</select>
+		<input type="submit" name="submit">
+		<input type="reset" name="reset">
+		<input type="button" value="inputbutton">
+		<button>button</button><br>
+		<input list="browsers">
+		<datalist id="browsers">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist><br>
+		
+	</form>
+	<form action="" method="post">
+		Username:<input type="text" name="user_name">
+		Encryption:<keygen name="security">
+			<input type="submit">
+	</form>
+	<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+		<input type="range" id="a" value="50">100+<input type="" id="b" value="50">=<output name="x" for="a b"></output>
+	</form><br>
+	<h4>frame</h4>
+	<iframe loading="lazy" src="https://www.baidu.com/" width="200" height="200" frameborder="0"></iframe>
+	<iframe src="https://www.baidu.com" name="iframe_a"></iframe>
+	<p><a href="https://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+	<h4>insert a script</h4>
+	<script>
+		document.write("Hello World")
+	</script>
+	<noscript>Sorry,your browser does not support it </noscript>
+
+	<h1>This is my first paragraph</h1>
+	<p id="demo">JavaScript can change the style of HTML elements</p>
+	<script>
+		function myFunction()
+		{
+			x=document.getElementById("demo")
+			x.style.color="#ff0000";
+		}
+	</script>
+	<button type="button" onclick="myFunction()">click here~</button>
+	<br><br><br>
+	&lt;&gt;&nbsp;a&#768;
+	<h1>速查</h1>
+	<h1>一级标题</h1>
+	<h2>The secondary title</h2>
+	<h3>The third title</h3>
+	<h4>The forth title</h4>
+	<h5>The fifth title</h5>
+	<h6>The smallest title</h6>
+	<p>This is a paragraph</p><br>
+	<hr>A horizontal line
+	<!--  -->
+	<b>bold text</b>
+	<i>Italic text</i>
+	<code>computer text</code>
+	<kbd>keyboard input</kbd>
+	<pre>performatted text</pre>
+	<small>small text</small>
+	<strong>important text</strong>
+	<abbr title="etcetera">etc.(缩写)</abbr>
+	<acronym title="World Wide Web">www</acronym>
+	<p>define the address</p>
+	<address>
+		Written by <a href="">Jon Doe</a>.<br>
+		Visit us at:<br>
+		Example.com<br>
+		Box 564.Disneyland<br>
+		USA
+	</address>
+	<bdo>wenzifangxiang</bdo>
+	<blockquote>A part referenced from another source</blockquote>
+	<cite>The name of job</cite>
+	<del>the deleted text</del>
+	<ins>the insert text</ins>
+	<sub>the subscript text</sub>
+	<sup>the superscript text</sup>
+	<h2>Links</h2>
+	common links:<a href="">The link text</a><br>
+	Image link:<a href=""><img src="" alt=""> </a><br>
+	mail link:<a href="">send email</a><br>
+	bookmarks:<a id="tips">tip part</a><br>
+	<a href="#tips">skip to tips</a><br>
+	<br><br><br>
+
+	<h1>This is my first headline</h1>
+	<p>This is my firsr paragraph</p>
+	<myHero>This is my first new element</myHero>
+
+	<canvas id="myCanvas">Your browers does not support the HTML5 Canvas tag.</canvas>
+	<script>
+		var c=document.getElementById('myCanvas');
+		var ctx=c.getContext('2d');
+		ctx.fillStyle='#ff0000';
+		ctx.fillRect(0,0,80,100);
+	</script>
+	</body>
+	</html>

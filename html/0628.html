@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+</head>
+<body>
+	<table border="1" >
+		<!-- 带有标题的 -->
+		<caption>Monthly savings</caption>
+		<tr align="center">
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr align="center">
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+	<!-- <colgroup>和<col>标签为表格中的三个列设置了背景色 -->
+	<table border="1">
+		<colgroup>
+			<col span="2" style="background-color: red">
+			<col style="background-color: yellow">
+		</colgroup>
+		<tr>
+			<th>ISBN</th>
+			<th>Title</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td>3476896</td>
+			<td>My first HTML</td>
+			<td>$53</td>
+		</tr>
+	</table>
+	<!-- 带有<thead>、<tfoot>、<tbody>元素的HTML表格 -->
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Sum</td>
+				<td>$180</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>January</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$80</td>
+			</tr>
+		</tbody>
+	</table><br><br>
+<!-- HTML list -->
+<h4>unordered list</h4>
+<ul>
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ul>
+<h4>ordered list</h4>
+<ol>
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ol>
+<ol start="50">
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ol>
+<h4>defination list</h4>
+<dl>
+	<dt>Coffee</dt>
+	<dd>-black hot drink</dd>
+	<dt>Milk</dt>
+	<dd>-White cold drink</dd>
+</dl>
+<h4>the different ordered list</h4>
+<h4>Numbered list</h4>
+<ol>
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ol>
+<h4>Uppercase letter list</h4>
+<ol type="A">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ol>
+<h4>Lowercase letter list</h4>
+<ol type="a">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ol>
+<h4>List of Roman numerals</h4>
+<ol type="I">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ol>
+<h4>List of lowercase Roman numerals</h4>
+<ol type="i">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ol>
+<h4>the different unordered list</h4>
+<ul type="disc">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ul>
+<ul type="circle">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ul>
+<ul type="square">
+	<li>Apples</li>
+	<li>Bananas</li>
+	<li>Lemons</li>
+	<li>Oranges</li>
+</ul>
+<h4>Nested list</h4>
+<ul>
+	<li>Coffee</li>
+	<li>Tea
+		<ul>
+			<li>Black tea</li>
+			<li>Green tea
+				<ul>
+					<li>China</li>
+					<li>Africa
+						<ul>
+							<li>A</li>
+							<li>B</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>Milk</li>
+</ul>
+<h4>文档中的一个区域将显示为蓝色</h4>
+<div style="color: #0000ff ; background-color:pink">
+	<h3>这是一个在div元素中的标题</h3>
+	<p>这是一个在div元素中的文本</p>
+</div>
+<h4>使用sapn元素对文本中的一部分进行着色</h4>
+<p>我的母亲有<span style="color:blue">蓝色</span>的眼睛</p>
+<h4>div元素创建多列布局</h4>
+<div id="container" style="width: 500px"> 
+	<div id="header" style="background-color: #ffa500">
+		<h1 style="margin-bottom: 0">The main web headline</h1>
+	</div>
+	<div id="menu" style="background-color: #ffd700;height: 200px;width: 100px;float: left;">
+		<b>menu</b><br>
+		HTML<br>
+		CSS<br>
+		JavaScript
+	</div>
+	<div id="content" style="background-color: #eeeeee;height: 200px;width: 400px;float: left;">
+		The content is here~
+	</div>
+	<div id="footer" style="background-color: #ffa500;clear:both;text-align: center; ">
+		copyright&copy;runoob.com
+	</div>
+	<h4>Use table for web layout</h4>
+	<table width="500" border="0">
+		<tr >
+			<td colspan="2" style="background-color: #ffa500;font-size: 33px">
+				<b>The main web headline </b>
+				
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color: #ffd700;width:100px;vertical-align: text-top;">
+			<b>meun</b><br>
+			HTML<br>
+			CSS<br>
+			JavaScript
+			</td>
+			<td style="background-color: #eeeeee;height: 200px;width: 400px;vertical-align: text-top;">The content is here~</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background-color: #ffa500;text-align: center;">copyright &copy;runoob.com</td>
+		</tr>
+	</table>
+	<h4>The form</h4>
+	<form action="">
+		First name: <input type="text" name="firstname"><br>
+		Last  name: <input type="text" name="lastname"><br>
+		<p><b>Attention:</b>The form itself is invisible. Also note that the default width of a text field is 20 characters</p><br>
+		Username:<input type="text" name="user"><br>
+		Password:<input type="password" name="password"><br>
+		<input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female">Female<br>
+		<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+		<input type="checkbox" name="vehicle" value="Car">I have a car<br>
+	</form>
+	<h4>Submit form</h4>
+	<form name="input" action="html_form_action.php" method="get"> 
+		Usrname: <input type="text" name="user"><br>
+		<select name="cars">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="fiat" selected>fiat</option>
+			<option value="audi">Audi</option>
+		</select><br>
+		<textarea rows="10" cols="30">This is a textarea
+		</textarea><br>
+		<input type="button" value="Hello World" >
+		<input type="submit" value="Submit">
+	</form>
+	<h4>Forms with borders</h4>
+	<form action="">
+		<fieldset>
+			<legend>Personal information:</legend>
+			Name : <input type="text" size="30"><br>
+			E-mail : <input type="text" size="30"><br>
+			Date of birth : <input type="text" size="20">
+		</fieldset>
+	</form>
+	<h4>A forms with an input field and a confirm button</h4>
+	<form action="">
+		First name : <input type="text" name="FirstName" value="Mickey"><br>
+		Last name : <input type="text" name="LastName" value="Mouse"><br>
+		<input type="submit" name="提交">
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>0708</title>
+        <script src="0708.js"></script>
+        <script>
+            function test1() {
+                var carname="Volvo";
+                document.getElementById("demo").innerHTML=carname;
+            }
+            function test2() {
+                var a=1,b=2;
+                var c=a+b;
+                document.getElementById("demo1").innerHTML="c="+c;
+            }
+            var car=new Array("Saab","Volvo" ,"BMW");
+            for(var i=0;i<3;i++){
+                document.write(car[i]+"<br>");
+            }
+            var person={
+                firstname:"John",
+                lastname:"Doe",
+                id:5556
+            };
+            document.write(person.lastname+"<br>");
+            document.write(person["lastname"]+"<br>");
+             //document.write(zhangsan.lastName+zhangsan.firstName+"现在"+zhangsan.age+"岁了。");
+       
+        </script>
+    </head>
+    <body>
+        <p>点击这里来创建变量，并显示结果</p>
+        <button type="button" onclick="test1()">点击这里</button>
+        <p id="demo"></p>
+        <button type="button" onclick="test2()">点击这里</button>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            var zhangsan={
+                firstName:"San",
+                lastName:"Zhang",
+                age     :50,
+                eyeColor:"black"
+            };
+            document.getElementById("demo2").innerHTML= zhangsan.lastName+zhangsan.firstName+"现在"+zhangsan.age+"岁了。";          
+        </script>
+        <p>创建和使用对象方法。</p>
+        <p>对象方法作为一个函数定义存储在对象属性中</p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <script>
+            var person1={
+                firstName:"John",
+                lastName:"Doe",
+                id:5566,
+                fullName:function(){
+                    return this.firstName+" "+this.lastName;
+                }
+            }
+            document.getElementById("demo3").innerHTML="加括号输出函数执行结果"+person1.fullName();
+            document.getElementById("demo4").innerHTML="不加括号输出函数表达式"+person1.fullName;
+        </script>
+        <p>点击这个按钮，来调用带参数的函数。</p>
+        <button onclick="check1('Harry Potter','Wizard')">点击这里</button>
+        <button onclick="check1('Bob','Builder')">再次点击这里</button>
+        <!-- <script>
+            function check1(name,job){
+                alert("welcome "+name+",the "+job);
+            }
+        </script> -->
+        <p id="brs"></p>
+        <script>
+            function backResults(a,b){
+                return a*b;
+            }
+            document.getElementById("brs").innerHTML=backResults(4,3);
+        </script>
+        <p>局部变量在声明的函数外不可以访问</p>
+        <p id="lv"></p>
+        <script>
+            localno();
+            document.getElementById("lv").innerHTML="carName的类型是："+typeof carName;
+            function localno(){
+                var carName="Volvo";
+                document.write(carName.length)
+            }
+        </script>
+        <p id="create"></p>
+        <script>
+            var x="John";
+            var y=new String("John");
+            document.getElementById("create").innerHTML=typeof x+" "+typeof y;
+            document.getElementById("create").innerHTML= x===y;
+        </script>
+        <p id="ct">bjk</p>
+        <button onclick="connectTest()">click me~~~</button><br>
+        <p id="bt1">
+        </p>
+        <button onclick="backType()">CLICK</button><br>
+        <p>search 字符串“runoob”，并显示匹配的起始位置：</p>
+        <p id="ml"></p>
+        <button onclick="marchLocation()">click!!!</button>
+        <p>替换“ Microsoft”为“Runoob”:</p>
+        <p id="re">Visit Microsoft</p>
+        <button onclick="replaceWord()">click again</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html> 

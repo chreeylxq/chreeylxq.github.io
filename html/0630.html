@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>canvas</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000"></canvas>
+	<script>
+		var c=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		ctx.fillStyle="#ff0000";
+		ctx.fillRect(0,0,150,75);
+		var a=document.getElementById("myCanvas");
+		var ct=a.getContext("2d");
+		ct.moveTo(0,0);
+		ct.lineTo(200,100);
+		ct.stroke();
+		var b =document.getElementById("myCanvas");
+		var ctt=b.getContext("2d");
+		ctt.beginPath();
+		ctt.arc(100,50,40,0,2*Math.PI);
+		ctt.stroke();
+	</script>
+	<canvas id="secCanvas" width="200" height="100" style="border: 1px solid #000000"></canvas>
+	<script>
+		var c =document.getElementById("secCanvas");
+		var cxt=c.getContext("2d");
+		cxt.font="30px Arial";
+		cxt.strokeText("Hello World",23,60);
+	</script>
+	<canvas id="thirdCanvas" width="200" height="200" style="border: 1px solid #000000"></canvas>
+	<script>
+		var c =document.getElementById("thirdCanvas");
+		var ctx = c.getContext("2d");
+		var grd=ctx.createRadialGradient(30,30,50,170,170,50);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(0.5,"yellow");
+		grd.addColorStop(1,"pink");
+
+		ctx.fillStyle=grd;
+		ctx.fillRect(0,0,200,200);
+	</script>
+	<img id="scream" src="images/img_the_scream.jpg" alt="The Scream" width="220" height="277">
+	<canvas id="forthCanvas" width="250" height="300" style="border: 1px solid #000000"></canvas>
+	<script>
+		var c=document.getElementById("forthCanvas");
+		var ctx=c.getContext("2d");
+		var img=document.getElementById("scream");
+
+		img.onload=function() {
+			ctx.drawImage(img,10,10);
+		}
+		
+	</script>
+</body>
