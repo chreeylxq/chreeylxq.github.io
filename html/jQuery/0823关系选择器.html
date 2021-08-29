@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        $(function () {
+
+            $('button').click(function (event) {
+                $(this).css('color', 'red');
+                // a.sibling() 选择除了a 之外的别的同级标签
+                $(this).siblings().css('color', 'black');
+
+            });
+
+
+            $('span').click(function (event) {
+                // a.parent() 选择父级标签
+                $(this).parent().css('background', 'pink');
+                $(this).parent().siblings().css('background', 'transparent')
+                // transparent 是透明色
+            });
+
+            $('li').click(function (event) {
+                $(this).children('span').css('color', 'red');
+                // 选择子集标签  
+                // .children()  .siblings()  如果括号内什么都不写，代表选择所有子集，也可以限制为某一类的子集
+                $(this).siblings().children('span').css('color', 'black');
+            });
+
+            $('div').click(function (event) {
+                // $(this).children().css('background', 'red');
+                // $(this).children('span').css('background', 'skyblue');
+
+                $(this).children('.second').css('color', 'red');
+                // $(this).children('span')[1].style.color = 'red';
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <ul>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+        <li>文字
+            <span>X</span>
+        </li>
+
+    </ul>
+
+    <div>
+        <span>这是一个span</span>
+        <span class="second">这是第二个span</span>
+        <b>这是一个b</b>
+        <u>这是一个u</u>
+    </div>
+</body>
+
+</html>

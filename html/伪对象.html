@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            position: relative;
+        }
+        p::before{
+            /* content决定before伪对象存在的根本 */
+            content: '之前的';
+            background: purple;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            /* 给宽高无效，创建的是行内元素，变为行内块display：inline-block */
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            
+        }
+        p::after{
+            content:'';
+            color: white;
+            background: rebeccapurple;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+        }
+
+        /* 在内容之前或之后追加东西，必须加content
+            before 内容之前 占位
+            after 内容之后  占位 */
+    </style>
+</head>
+<body>
+    <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字</p>
+</body>
+</html>

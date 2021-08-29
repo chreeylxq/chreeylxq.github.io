@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="0721.js"></script>
+    <title>0721</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <button onclick="checkToday()">点击检查今天是否合格！</button>
+    <p id="demo2">单击按钮创建一个数组，调用ucase（）方法，并显示结果。</p>
+    <button onclick="myFunc()">dianwo </button>
+    <p id="demo3"></p>
+    <p id="demo4">单击按钮舍入与“2.5”最接近的整数</p>
+    <p id="demo5">1~2之间的随机数！</p>
+    <button onclick="myRound()">点击！</button>
+    <p id="demo6">返回5~10之间最大值</p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <button onclick="newDoc()">加载新的网页</button>
+    <div id="example"></div>
+    <script>
+        t1="浏览器的代号："+navigator.appCodeName+"<br>";
+        t2="浏览器的名称："+navigator.appName+"<br>";
+        t3="浏览器的版本："+navigator.appVersion+"<br>";
+        t4="启用Cookies："+navigator.cookieEnabled+"<br>";
+        t5="硬件平台："+navigator.platform+"<br>";
+        t6="用户代理："+navigator.userAgent+"<br>";
+        t7="用户代理语言："+navigator.language+"<br>";
+        document.getElementById("example").innerHTML=t1+t2+t3+t4+t5+t6+t7;
+    </script>
+    <p>点击按钮，显示确认框</p>
+    <button onclick="myConfirm()">点我</button>
+    <p id="confir"></p>
+
+    <p>点击按钮查看输入的对话框</p>
+    <button onclick="myPrompt()">点我</button>
+    <p id="mp"></p>
+
+    <p>单击按钮每三秒出现一个“hello”警告框~</p>
+    <p id="ms"></p>
+    <button onclick="mySetInterval()">点击我！</button>
+    <p>页面上显示时钟</p>
+    <p id="ds"></p>
+    <button onclick="StopClock()">stop</button>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        $(function () {
+            $('img').mouseover(function (event) {
+                $('img').attr('src', '../images/img2.jpg');
+                $('img').attr('title', '鼠标移入啦');
+                $('img').attr('alt', '这是一个图片');
+
+                var src = $('img').attr('src');
+                console.log(src);
+            });
+            $('img').mouseout(function (event) {
+                $('img').attr('src', '../images/img1.jpg');
+                $('img').removeAttr('alt');
+            });
+        });
+
+        /*
+            修改或设置标签属性    选择标签. attr('属性','属性对应值')
+            删除标签属性         选择标签. removeAttr('属性')
+            获取标签属性         选择标签. attr('属性')
+        */
+
+        $(function () {
+            var btn = document.getElementById('btn');
+            // btn.innerHTML = '修改之后的内容';
+            $(btn).html('修改之后的');
+
+            // $('button')选择上下文所有的button
+            $('button').click(function (event) {
+                // this 代表用户当前操作的标签 this 是dom对象
+                // $('button').css('color', 'red');
+                $(this).css('color', 'red');  //把dom对象转化为jq对象  $(dom对象)
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../images/img1.jpg" alt="">
+
+    <button id="btn">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</body>
+<!-- 
+    jq对象：用$()选择出来的对象
+    dom对象：用原生方法获取的就是dom对象
+
+    把dom对象转化为jq对象  $(dom对象)
+ -->
+
+</html>

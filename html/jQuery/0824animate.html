@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            position: relative;
+            left: 0px;
+            transition: all 2s;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('button').click(function (event) {
+                // $(div).animate({})大括号内可以修改的属性只能是纯数值的属性  wide height font-size top right left bottom
+                // $('div').animate({ 'width': '200px', 'height': '200px', 'left': '600px' }, 2000);
+
+                $('div').css({ 'width': '200px', 'height': '200px', 'left': '600px', 'transform': 'rotate(360deg)' })
+            });
+        });
+    </script>
+</head>
+<!-- 
+    .animate({'css样式':'样式对应的值','css样式':'样式对应的值','css样式':'样式对应的值'},时间)
+    时间可以省略，自带时间
+ -->
+
+<body>
+    <button>按钮</button>
+    <div></div>
+</body>
+
+</html>

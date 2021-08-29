@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        span {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            outline: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('button').click(function (event) {
+                var val = $('input').val();
+                if (val == '' || val == null) {
+                    alert('请输入内容');
+                } else {
+                    // 创建一个新标签 
+                    var newLi = $('<li>' + val + '</li>');
+                    var box = $('<span>Del</span>');
+
+                    // 添加标签
+                    newLi.append(box);
+                    $('ul').prepend(newLi);
+
+
+                    // 给新增标签添加点击事件
+                    box.click(function (event) {
+                        $(this).parent().remove();
+                    });
+                    // 该方法添加点击事件效率低，每增加一个标签就要遍历所有的span 添加事件
+                    // $('span').click(event){
+                    //     $(this).parent().remove()
+                    // }
+
+                    $('input').val('');
+                }
+            });
+
+            // 给现有的span绑定点击事件
+            $('span').click(function (event) {
+                $(this).parent().remove();
+            });
+        });
+        /*
+            .val() 获取表单元素的值
+            .val('内容') 修改表单元素的值
+            a.remove() 删除a元素
+        */
+    </script>
+</head>
+
+<body>
+    <input id='input' type="text"><button>发布</button>
+    <ul>
+
+    </ul>
+</body>
+
+</html>

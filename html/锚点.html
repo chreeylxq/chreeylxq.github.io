@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锚点</title>
+    <style>
+        /* p{
+            line-height: 20px;
+            /* 行高：从文字中心基线开始向上取留白的一半，向下取留白的一半，中间就是行高
+               测量：第一行文字开始到第二行文字开始，中间就是行高
+            */
+            /* text-indent: 2em; */
+            /* 首行缩进，可以用px，em（指当前一个文字大小） */
+        /* }
+        i{
+            font-style: normal;
+        }
+        b{
+            font-weight: normal;
+        }
+        u{
+            text-decoration: none;
+        } */ 
+        /* div{
+            /* 盒子模型：指盒子占位 
+                         width heigh(content)
+                         border margin padding
+            */
+            /* width: 100px;
+            height: 100px; */
+            /* border: 1px solid; */
+            /* border-top: 1px solid #000; */
+            /* 边框的类型solid dash dotted 
+             border-bottom/border-left/botton-right
+             margin和padding也一样
+             margin-top
+             margin-bottom
+             margin-right
+             margin-left
+             透明色：transparent
+            */
+            /* text-align: center; */
+            /* line-height: 100px; */
+            /* margin: 20px;  */
+            /* 外边距，四个方向的外边距 */
+            /* padding: 10px; */
+            /* 内边距，边框和内容的留白 */
+        /* }  */
+        div{
+            border: 1px solid #000;
+            width: 1200px;
+            height:600px;
+            background: url("images/earth.jpg") repeat-x;
+            color: white;
+        }
+        p{
+            width: 0px;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-right:100px solid rebeccapurplertf4;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>张小龙</h2>
+
+    <p>2019年10月10日，张小龙以110亿元位列《2019年胡润百富榜》第351位。 <sup><a href="#first">[1]</a></sup>  2020年2月26日，以10亿元人民币财富名列《2020世茂深港国际中心·胡润全球富豪榜》第1805位。 <sup> <a href="#second">[2]</a></sup>  2020年12月18日，入选2020中国品牌人物500强，排名54 <sup><a href="[3]"></a></sup>。</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <ol>
+        <li><a href="" name="first">胡润百富榜2019年全名单</a> </li>
+        <li><a href="" name="second">胡润研究院发布《2020世茂深港国际中心·胡润全球富豪榜》</a> </li>
+    </ol>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    <!-- 锚点标记：
+            1.找到所有点击的内容，用a包裹 <a hret="#锚点名字">包裹内容</a>
+            2.找到所要跳转的内容，用a包裹，取name属性 <a href="" name="锚点名字"></a>
+        
+            or 
+            <a href="页面.html#锚点名字"></a>
+        -->
+    <!-- 标签只负责页面结构，所有与样式有关都是css负责 -->
+    <!-- bui 和span的用法一模一样 -->
+    <!-- <b>加粗</b><u>下划线</u><i>倾斜</i> -->
+    <div>盒子盒子盒子盒子盒子盒子盒子</div>
+    <p>文字</p>
+</body>
+</html>

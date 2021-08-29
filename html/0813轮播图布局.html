@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        div {
+            width: 1000px;
+            height: 350px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul {
+            width: 9999px;
+            /* li 的父级 ul 宽度足够宽，li 中的图片才能浮上来，不然上不来*/
+            position: relative;
+            /* 相对定位：半标准流  占原来的位置，相对自身移动  */
+
+        }
+
+        ul li {
+            float: left;
+        }
+
+        span {
+            width: 40px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            /* 背景透明*/
+            position: absolute;
+            color: white;
+            top: 50%;
+            margin-top: -30px;
+            /*  top 和 margin-top 使得span绝对定位居中  */
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        #left {
+            left: 0px;
+            border-top-right-radius: 80%;
+            border-bottom-right-radius: 80%;
+        }
+
+        #right {
+            right: 0px;
+            border-top-left-radius: 80%;
+            border-bottom-left-radius: 80%;
+        }
+
+        span:hover {
+            background: rgba(0, 0, 0, 1);
+        }
+
+        ol {
+            /* background: rgba(255, 255, 255, 0.3); */
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            margin-left: -21px;
+            bottom: 20px;
+
+        }
+
+        ol li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        .current {
+            background: rgba(131, 148, 224, 0.5);
+        }
+
+        /* 淡出动画 */
+        .move {
+            animation: slide 1.5s;
+        }
+
+        @-webkit-keyframes slide {
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes slide {
+            form {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<!-- 定位的标签有图层顺序，后写的在上面 
+     可以通过z-index 来调整  默认值为0  值越大越靠上-->
+
+<body>
+    <div id='content'>
+        <ul id='move'>
+            <li><img src="images/img1.jpg" alt="" href=></li>
+            <li><img src="images/img2.jpg" alt="" href=></li>
+            <li><img src="images/img3.jpg" alt="" href=></li>
+        </ul>
+        <span id="left">❮</span>
+        <span id="right">❯</span>
+        <ol id="list">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <script>
+        //  自动播放
+        var num = 0;
+
+        var timer;
+        function go() {
+            timer = setInterval(() => {
+                num++;
+                if (num > 2)
+                    num = 0;
+                move.style.left = -1000 * num + 'px'; //让ul移动
+
+                // 对应的圆圈变色
+                for (var i = 0; i < list.children.length; i++) {
+                    // 排他
+                    list.children[i].removeAttribute('class', 'current');
+                }
+                list.children[num].setAttribute('class', 'current');
+            }, 1000);
+        }
+        go();
+        // 鼠标移入停止
+        content.onmouseover = function () {
+            clearInterval(timer);
+        }
+        // 鼠标移除继续
+        content.onmouseout = function () {
+            go();
+        }
+
+        //点击圆圈
+        for (var i = 0; i < list.children.length; i++) {
+            //给li自定义标签属性
+            list.children[i].setAttribute('index', i);
+            list.children[i].onclick = function () {
+                for (var j = 0; j < list.children.length; j++)
+                    list.children[j].removeAttribute('class', 'current');
+                //当前用户点击的li变颜色
+                this.setAttribute('class', 'current');//当前用户点击的li变色
+                move.style.left = -1000 * this.getAttribute('index') + 'px';//让ul移动
+                num = this.getAttribute('index');//把点击和自动播放联系起来
+            }
+        }
+    </script>
+</body>
+
+</html>

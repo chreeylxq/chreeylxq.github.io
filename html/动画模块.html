@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: blueviolet;
+            animation: move 8s;
+        }
+        @keyframes move{
+            0%{
+                transform: translate(0px,0px);
+            }
+            25%{
+                transform: translate(100px,0px);
+                background: brown;
+                border-radius: 50%;
+            }
+            50%{
+                transform: translate(100px,100px);
+                background: burlywood;
+                border-radius: 50%;
+            }
+            75%{
+                transform: translate(0px,100px);
+                background: coral;
+                border-radius: 50%;
+            }
+            100%{
+                transform: translate(0px,0px);
+                background: blueviolet;
+                border-radius: 50%;
+            }
+            /* 定义动画：
+                @keyframes 动画名字{
+                    各个状态的样式条
+            } 
+               使用动画：
+               animation：动画名称  持续时间 动画执行次数（可以具体到多少次，也可以infinite无限循环）*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

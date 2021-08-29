@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="0723.js"></script>
+    <title>百度新闻--海量中文资讯平台</title>
+    <meta name="description" content="百度新闻是包含海量资讯的新闻服务平台，真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等，快速了解它们的最新进展。">
+    <link rel="stylesheet" href="0723.css">
+</head>
+<body>
+    <div id="header-wrapper">
+        <div id="userbar" style="font-family: Arial;">
+            <ul id="">
+                <li>
+                    <a href="">百度首页
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">登录
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">注册
+
+                    </a>
+                </li>
+                <li id="app_tooltip">
+                    <a href="" onmouseover="displayAppPic()" onmouseout="picMove()">百度新闻客户端
+                        <div id="app_tooltip_qrcode" style="display: none;">
+                            <img src="images/imgapp.png" alt="">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul id="header-link-wrapper"> 
+            <li><a href="" style="color: black;">网页</a></li>
+            <li><span style="color: black;">新闻</span></li>
+            <li><a href="" style="color: black;">贴吧</a></li>
+            <li><a href="" style="color: black;">知道</a></li>
+            <li><a href="" style="color: black;">音乐</a></li>
+            <li><a href="" style="color: black;">图片</a></li>
+            <li><a href="" style="color: black;">视频</a></li>
+            <li><a href="" style="color: black;">地图</a></li>
+            <li><a href="" style="color: black;">文库</a></li>
+            <div id="headdiver"></div>
+        </ul>
+        <div id="headclearfix"></div>
+    </div>
+    <div id="header-search"  >
+        <div id="header" style="text-align: center;">
+            <table class="sbox">
+                <tr>
+                    <td class="logo" >
+                        <div class="slogo"><a href="https://news.baidu.com" ><img src="images/baidulog-news.png" alt="" id="apppic"></a></div>
+                        <div class="date"></div>
+                    </td>
+                    <td id="search">
+                        <div>
+                        <table id="searchtab"  cellspacing="0"> 
+                            <tr>
+                                <td>
+                                    <input class="word" id="ww" name="word" size="42" maxlength="100" tabindex="1" autocomplete="off">
+                                    <!-- <span class="inputspan" >
+                                        <input class="word" id="ww" name="word" size="42" maxlength="100" tabindex="1" autocomplete="off">
+                                    </span> -->
+                                </td>
+                                <td>
+                                    <input type="button" id="btnbaidu" class="btn" value="百度一下" onmouseover="bgcChange()" onmouseout="bgcRecovery()">
+                                    <!-- <span class="s_btn_wr">
+                                    </span> -->
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    </td>
+                   
+                    <td class="help"><a href="https://baidu.com" style="color: black;">帮助</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu" class="mod-navbar">
+            <div id="channel-shanghai" class="channel-shanghai clearfix" style="z-index: 9;">
+                <div class="menu-list" style="width: 1200px;" >
+                <ul class="menu-listul">
+                    <li><a href="">首页</a></li>
+                    <li><a href="">国内</a></li>
+                    <li><a href="">国际</a></li>
+                    <li><a href="">军事</a></li>
+                    <li><a href="">财经</a></li>
+                    <li><a href="">娱乐</a></li>
+                    <li><a href="">体育</a></li>
+                    <li><a href="">互联网</a></li>
+                    <li><a href="">科技</a></li>
+                    <li><a href="">游戏</a></li>
+                    <li><a href="">女人</a></li>
+                    <li><a href="">汽车</a></li>
+                    <li><a href="">房产</a></li>
+                </ul></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

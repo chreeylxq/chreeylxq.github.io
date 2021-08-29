@@ -1,0 +1,162 @@
+header{
+    width: 960px;
+    height: 96px;
+    background: white;
+    margin: 0 auto;
+}
+nav{
+    height: 68px;
+    background: url(images/nav_bg\ .png) repeat-x;
+    min-width: 960px;
+}
+main{
+    text-align: center;
+    background: #fef2c0;
+    height: 589px;
+    /* 在标准流中：解决img的留白问题：给父级加高度，或者把图片变成块级
+       浮动之后，父级的overflow：hidde*/
+}
+header h1{
+    /* background: #fef2c0; */
+    float: left;
+    margin-top: 30px;
+}
+header .right{
+    width: 520px;
+    height: 96px;
+    float: right;
+}
+.right p{
+    float: left;
+    margin-left: 34px;
+    line-height: 96px;
+    color: #f60;
+    font-size: 11px;
+    font-weight: lighter;
+}
+.right .search{
+    margin-left: 0px;
+    position: relative;
+}
+.right button{
+    width: 18px;
+    height: 18px;
+    background: url("images/fangdajing.png") no-repeat ;
+    position: absolute;
+    border: 0px;
+    right: 6px;
+    top:40px
+}
+header .search input{
+    width: 200px;
+    height: 28px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0px 22px 0 10px;
+}
+.selectWrapper{
+    float: left;
+    position: relative;
+}
+footer{
+    /* height: 396px; */
+    background: #f60;
+}
+#offering ,#language{
+    color: #f60;
+    font-size: 11px;
+    font-weight: lighter;
+    outline: none;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    border: none;
+    /* 背景透明 */
+    background: transparent;
+    /* 清除样式 */
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    /* 背景图片是箭头的图 */
+    background: url("images/jiantou.png") no-repeat scroll right center transparent
+    
+}
+#language{
+    left:202px;
+    width: 33px;
+}
+.defaultText{
+    float: left;
+    z-index: 100;
+}
+nav ul{
+    width: 960px;
+    margin:0 auto;
+}
+nav ul li{
+    height: 68px;
+    float:left;
+    text-align: center;
+    margin-left: 110px;
+    line-height: 68px;
+    color: white;
+    font-size: 14px;
+    background: url("images/littlejiantou.png") no-repeat right center;
+    padding-right: 32px;
+}
+footer .footerWrapper{
+    width: 960px;
+    margin: 0px auto;
+    padding-top: 45px;
+}
+footer h1{
+    display: inline-block;
+    vertical-align: top;
+}
+footer .msg{
+    display: inline-block;
+    width: 732px;
+    margin-left: 33px;
+}
+footer div dl{
+    display: inline-block;
+    width: 177px;
+    vertical-align: top;
+    font-size: 12px;
+    color: white;
+    line-height: 25px;
+}
+.msg dt{
+    font-weight: bold;
+}
+hr{
+    border: none;
+    height: 1px;
+    background: #ffb380;
+    margin-top: 98px;
+    margin-bottom: 0px;
+}
+.copyright{
+    margin-top: 0px;
+    padding: 20px 0px;
+    height: 20px;
+    text-align: center;
+    width: 100%;
+}
+.copyright a{
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: lighter;
+    word-spacing: 1px;
+}
+.copyright span{
+    color: white;
+    font-size: 12px;
+}
+
+

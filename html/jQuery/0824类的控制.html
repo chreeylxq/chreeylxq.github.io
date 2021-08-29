@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 80px;
+            height: 50px;
+            background: wheat;
+            color: white;
+        }
+
+        .anniu {
+            width: 80px;
+            height: 50px;
+            background: pink;
+            color: black;
+        }
+    </style>
+
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        $(function () {
+            // $('button').mouseover(function (event) {
+            //     $(this).removeClass('anniu');
+            // });
+            // $('button').mouseout(function (event) {
+            //     $(this).addClass('anniu');
+            // });
+
+            $('button').click(function (event) {
+                $(this).toggleClass('anniu');
+
+                console.log($(this).hasClass('anniu'));
+            })
+        });
+
+
+    </script>
+</head>
+<!--  
+    增加类：addClass('类名')
+    删除类：removeClass('类名')
+    切换类：toggleClass('类名')
+    判断是否有该类：hasClass('类名')
+ -->
+
+<body>
+    <button class="btn anniu">按钮</button>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="0818table.js"></script>
+    <style>
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .del {
+            color: red;
+            font-family: '楷体';
+            cursor: pointer;
+        }
+
+        thead {
+            font-size: 20px;
+            font-family: '微软雅黑';
+        }
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            background: rosybrown;
+            text-align: center;
+            line-height: 24px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            font-family: '微软雅黑';
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="post" name="forms">
+        <label for="user">姓名:</label>
+        <input type="text" name="" id="user">
+
+        <label for="clas">班级:</label>
+        <input type="text" name="" id="clas">
+
+        <span id="add" onclick="add()">新增</span>
+        <span id="del" onclick="del()">删除</span>
+        <span id="all" onclick="alls()">全选</span>
+        <!-- button自带事件 -->
+
+        <table id="info">
+            <thead>
+                <th width="200px">选择</th>
+                <th width="200px">姓名</th>
+                <th width="200px">班级</th>
+                <th width="100px">删除</th>
+            </thead>
+            <tbody id="person">
+                <tr>
+                    <td><input type="checkbox" name="selected"></td>
+                    <!-- 
+                        通过form的name值.表单元素的name值，选择标签 
+                        如果表单元素的name对于的值只有一个是相同的，得到的就是该标签，如果是多个得到的是数组
+                    -->
+                    <td>张三</td>
+                    <td>java9</td>
+                    <td class="del" onclick="dele(this)">删除</td>
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

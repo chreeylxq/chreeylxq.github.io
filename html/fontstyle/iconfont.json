@@ -1,0 +1,93 @@
+{
+  "id": "2726468",
+  "name": "camera",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1311633",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "4520182",
+      "name": "相机",
+      "font_class": "xiangji1",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "5173772",
+      "name": "相机",
+      "font_class": "xiangji2",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5202416",
+      "name": "相机",
+      "font_class": "iconfont-zhutizuizhong-",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "5423494",
+      "name": "相机",
+      "font_class": "z",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "8300829",
+      "name": "相机",
+      "font_class": "xiangji3",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "12899641",
+      "name": "相机",
+      "font_class": "xiangji4",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "14626453",
+      "name": "相机",
+      "font_class": "xiangji5",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "14827445",
+      "name": "相机",
+      "font_class": "xiangji6",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "16372342",
+      "name": "相机",
+      "font_class": "xiangji7",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "18644058",
+      "name": "相机",
+      "font_class": "xiangji8",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "19690327",
+      "name": "相机",
+      "font_class": "xiangji9",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

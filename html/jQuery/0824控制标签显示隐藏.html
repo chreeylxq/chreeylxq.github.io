@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background: tomato;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function (event) {
+                $('div').show(1000);
+            });
+            $('button').eq(1).click(function (event) {
+                $('div').hide(1000, function () {
+                    alert();
+                });
+            });
+            $('button').eq(2).click(function (event) {
+                $('div').toggle();
+            });
+        })
+    </script>
+</head>
+<!-- 
+    .show() 显示
+    .hide() 隐藏
+    .toggle() 切换
+     
+    （） 小括号内可以加时间，可以使具体的数值，也可以‘slow’ ‘fast’ 单位是ms
+    .show(时间，function(){回调函数，等动画执行完毕之后执行的代码，可以省略不写})
+ -->
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+
+</html>

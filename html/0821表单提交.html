@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: orangered;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        select {
+            outline: none;
+            width: 70px;
+            height: 25px;
+            font-family: '微软雅黑';
+            font-size: 13px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="0821表单提交.html" method="post" onsubmit="return register()" name="forms">
+        <!-- onsubmit 表单提交时会触发   如果值为 return false  禁止表单提交     return true  允许提交 -->
+        用户名：<input type="text" name="user" onfocus="userTip.innerHTML=''" onblur="check(this)">
+        <span id="userTip"></span><br><br>
+        <!-- 
+            onfocus="函数名" 获取焦点时执行的js代码
+            onblur="js代码"  失去焦点时执行的js代码
+            onchange="js代码"  改变焦点值执行的 js 代码
+         -->
+
+
+
+        密&nbsp;&nbsp;码：<input type="password" name="password"><span id="psdTip"></span><br><br>
+
+        性&nbsp;&nbsp;别：<input type="radio" name="sex" value="male">male <input type="radio" name="sex"
+            value="female">female<span id="sexTip"></span><br><br>
+
+        爱&nbsp;&nbsp;好：<input type="checkbox" name="interest">玩游戏 <input type="checkbox" name="interest">音乐 <input
+            type="checkbox" name="interest">电影<span id="hobbyTip"></span><br><br>
+        所在地：
+        <select name="address" id="">
+            <option value=""></option>
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广州</option>
+        </select><span id="addressTip"></span><br><br>
+        <!--
+             获取 select 选择的 value 值 
+              1.设置select 的 name 值 ， name.value
+              2.select.option[i].value
+            
+            清空列表项
+              select.option.length = 0;
+
+              var arr = [0,1,1,2,2,5,3,3];
+              arr.length = 10 ;
+              arr.length = 2;
+            可通过该方法扩展或者截取数组
+
+            select.option.selectedIndex
+            获取当前选择选项的索引值
+
+                          新增选项的索引值                  选项值
+            select.option[this.option.length] = new Option('南京','nj');
+            新增下拉选项                                          选项的value值
+
+
+            选择标签.click() 自动执行选择标签的点击事件
+        -->
+
+
+
+        <input type="submit" value="注册">
+    </form>
+
+    <script>
+        var flag = true;
+        function $(idElement, tipId, contentElement) {
+            if (idElement == '') {
+                flag = flag && false;
+                tipId.innerHTML = contentElement;
+                tipId.style.color = 'red';
+            } else {
+                tipId.innerHTML = '完成 √';
+                tipId.style.color = 'green';
+                flag = flag && true;
+            }
+        }
+        function register() {
+
+
+            //判断用户名
+            var user = forms.user.value;
+            $(user, userTip, '请输入用户名');
+
+            var psd = forms.password.value;
+            $(psd, psdTip, '请输入密码');
+
+            var sexual = forms.sex.value;
+            $(sexual, sexTip, '请选择性别');
+
+            var hobby = forms.interest;
+            var index = 0;
+
+            for (var i = 0; i < hobby.length; i++) {
+                if (hobby[i].checked)
+                    index = 1;
+            }
+            if (!index) {
+                flag = flag && false;
+                hobbyTip.innerHTML = '请选择爱好';
+                hobbyTip.style.color = 'red';
+            } else {
+                hobbyTip.innerHTML = '完成 √';
+                hobbyTip.style.color = 'green';
+                flag = flag && true;
+            }
+
+            var location = forms.address.value;
+            $(location, addressTip, '请输入所在地！');
+            return false;
+        }
+
+        function check(element) {
+            var v = element.value;
+            if (v == '') {
+                userTip.innerHTML = '请输入用户名';
+                userTip.style.color = 'red';
+            } else {
+                userTip.innerHTML = '完成 √';
+                userTip.style.color = 'green';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[1,2,'hello',true,null,undefined];
+        console.log(typeof arr[2])
+        console.log(arr[2]);
+        console.log(typeof arr);
+        arr[6]='修改之后的'
+        console.log(arr[6]);
+        arr[2]=67;
+        console.log(arr[2]);
+        console.log(arr.length);
+        /*数组
+            1.数组属于对象类型
+            2.索引值：对应的就是数组的第几个元素，从0开始 ；选取数组中的某一个元素arr[index] index从0开始
+            3.可以给数组中的元素重新赋值
+            4.检测数组的长度  数组名.length
+            5.遍历数组
+                for(var i=0;i<arr.length; i++)
+                    console.log(arr[i]);
+        */
+
+        /*自动扩展数组
+            arr[index]='修改值'  若index存在，代表修改该索引值处的长度 ；若不存在，扩展数组，数组长度变为index+1
+        */ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul {
+            overflow: hidden;
+            /*li 浮动之后ul就没有高度，设置该属性可以不让后面的元素跟上来*/
+            background: cornflowerblue;
+        }
+
+        ul li {
+            float: left;
+            /* 列表横向排列，浮动即可 ,li 浮动之后 ul 没有高度，后面的内容会跟上去*/
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            /* 文字在 li 水平居中  */
+            line-height: 40px;
+            /* 文字垂直居中 */
+            cursor: pointer;
+        }
+
+        li.current {
+            /*交集选择器*/
+            background: tomato;
+            color: white;
+        }
+
+        div {
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+            display: none;
+            /* 标签隐藏*/
+        }
+
+        div.current {
+            display: block;
+            /* display:block块级标签显示   display:inline-block行内块显示    display:inline 行内标签显示*/
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="current">台州</li>
+        <li>社会</li>
+        <li>国内</li>
+        <li>国际</li>
+        <li>独家</li>
+        <li>军事</li>
+        <li>财经</li>
+    </ul>
+    <section>
+        <!-- section通常放置多个div的大内容  -->
+        <div class="current">台州内容</div>
+        <div>社会内容</div>
+        <div>国内内容</div>
+        <div>国际内容</div>
+        <div>独家内容</div>
+        <div>军事内容</div>
+        <div>财经内容</div>
+    </section>
+
+
+    <script>
+        function $(x) {
+            return document.getElementsByTagName(x);
+        }
+
+        var lis = $('li');
+        var box = $('div');
+        for (var i = 0; i < lis.length; i++) {
+            //自定义标签属性
+            lis[i].setAttribute('index', i);
+            /*等价于
+                lis[0].setAttribute('index',0)
+                lis[1].setAttribute('index',1)
+                lis[2].setAttribute('index',2)
+                ...
+            
+            */
+
+            lis[i].onclick = function () { //点击事件才会执行
+                //所有的 li 移除类
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].removeAttribute('class');
+                    box[j].removeAttribute('class');
+                }
+                //当前点击的 li 增加的类
+                this.setAttribute('class', 'current');
+                box[this.getAttribute('index')].setAttribute('class', 'current');
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

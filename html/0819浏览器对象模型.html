@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 在标签中使用事件 -->
+    <!-- <button onclick="alert('1')">按钮</button> -->
+    <!-- <button onclick="window.open('https://www.baidu.com/','打开新窗口','width=400px,height=500px')"> 
+        打开新窗口
+    </button>
+    <button id="btn">关闭当前窗口</button>
+    <h1>还剩<span id="time">5</span>秒关闭窗口</h1>-->
+
+
+    <!-- 可以找到之前的页面 -->
+    <button onclick="location.assign('https://www.baidu.com/')">页面跳转</button>
+
+    <!-- 相当于刷新 -->
+    <button onclick="location.reload()">重新加载</button>
+
+    <!-- 替换页面找不到之前的页面 -->
+    <button onclick="location.replace('https://www.baidu.com')">替换页面</button>
+
+    <!-- 可以找到之前的页面 -->
+    <button onclick="location.href='about:blank'">清空页面</button>
+    <button onclick="location.href='https://www.baidu.com'">替换页面</button>
+
+    <input type="color">
+    <input type="search" results='cd'>
+    <input type="number">
+    <input type="url">
+    <input type="email">
+    <input type="time" name="" id="">
+    <input type="week">
+    <input type="date">
+    <input type="month">
+    <input type="range">
+    <input type="tel">
+
+    <script>
+        // var num = 5;
+        // var timer;
+        // // 函数的另外一种定义方式
+        // var abb = function () {
+        //     alert('1')
+        // }
+        // timer = setInterval(function () {
+        //     num--;
+        //     time.innerHTML = num;
+        //     if (num == 0) {
+        //         clearInterval(timer); //关闭定时器
+        //         window.close();
+        //     }
+        // }, 1000);
+        // // 变量有函数类型
+        // console.log(typeof abb); //打印出来是函数类型
+
+        // btn.onclick = function () {
+        //     if (confirm('是否要关闭窗口？')) {
+        //         alert('关闭窗口')
+        //         window.close();
+        //     }
+        // }
+
+
+
+        // // var val = confirm('是否关闭窗口');
+        // // console.log(val);
+
+        // var add = function () {
+        //     console.log('1')
+        // }
+
+        // function jian() {
+
+        // }
+        // console.log(typeof (jian))
+        //变量有函数类型
+
+        // setInterval(add, 1000);//add就是一个函数
+
+        // setInterval(add(), 1000)//页面加载的时候会执行add函数的内容，没有延迟，执行一次
+        // setInterval('add()', 1000)//1s之后自动解析字符串,转化为可执行的js
+        // setInterval('add', 1000)//该写法不会执行代码，不会报错
+    </script>
+</body>
+
+</html>

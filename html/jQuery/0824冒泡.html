@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        div {
+            width: 500px;
+            height: 400px;
+            background: burlywood;
+            outline: none;
+            transition: all 2s;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background: coral;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            // 冒泡   出发子级事件的时候，会把祖先级别事件触发
+            $('div').click(function (event) {
+                console.log('进入div');
+
+            });
+            $('p').click(function (event) {
+                console.log('进入p');
+                event.stopPropagation();
+                // 阻止冒泡
+                // 1. event.stopPropagation();
+                // 2. return false;
+            });
+
+            // document文档对象
+            $(document).click(function (event) {
+                console.log('点击了文档对象')
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

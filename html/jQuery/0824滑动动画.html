@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: tomato;
+            display: none;
+
+        }
+    </style>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function (event) {
+                $('div').slideDown(1000);
+            });
+            $('button').eq(1).click(function (event) {
+                $('div').slideUp();
+            });
+            $('button').eq(2).click(function (event) {
+                $('div').slideToggle();
+            });
+        });
+    </script>
+</head>
+<!-- 
+    .slideDown() 滑动显示
+    .slideUp()  滑动隐藏
+    .slideToggle() 滑动切换
+    默认自带动画
+
+    .slideUp(时间，function(){动画执行完毕之后执行代码})
+ -->
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+
+</html>

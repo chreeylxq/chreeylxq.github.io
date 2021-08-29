@@ -1,0 +1,179 @@
+*{
+    margin: 0px;
+}
+#header-wrapper{
+    height: 32px;
+    line-height: 32px;
+    color: black;
+    font: 13px Arial;
+    float: right;
+    text-align: right;
+}
+#userbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* z-index:100 ;拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素前面 
+    zoom: 1; 显示一个滑动条来控制map的zoom级别 */
+}
+#userbar li{
+    display: inline;
+}
+#userbar a{
+    color: #333;
+    height: 31px;
+    line-height: 31px;
+    /* text-decoration: underline; */
+    margin: 0 12px;/* 调整a元素左右间距 */
+
+}
+#app_tooltip_qrcode{
+    position: absolute;
+    right: 8px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #f1f1f1;
+    
+}
+#app_tooltip_qrcode img{
+    width: 100%;
+    height: 100%;
+}
+#header-link-wrapper{
+    list-style-type: none;
+    float: right;
+    margin-right: 335px;
+    margin-top: -27px;
+    position:relative;
+}
+#header-link-wrapper li{
+    display: inline;
+    float: left;
+    margin-left: 22px;
+    font-size: larger;
+    font-weight: bold;
+}
+#headdiver{
+    height: 16px;
+    width: 1px;
+    background-color: #ebebeb;
+    position: absolute;
+    top: 5px;
+    right: -25px;
+}
+#headclearfix{
+    height: 1px;
+    width: 100%;
+    background-color: #ebebeb;
+    position: absolute;
+    top: 40px;
+    right: 1px
+}
+#header-search{
+    border: 0;
+    position: relative;
+    padding-top: 12px;
+    height: 100px;
+    top: 50px
+}
+
+.sbox{ 
+   margin-left: 510px;
+  
+}
+
+.slogo{
+    right: 8px;
+    width: 137px;
+    height: 43px;
+    border: 0px solid #f1f1f1;
+    margin-top: -20px;
+}
+#apppic{
+    width: 100%;
+    height: 100%;
+}
+.inputspan{
+    border: white;
+}
+
+.word{
+    border: 0px solid rgb(224, 220, 220);
+    width: 522px;
+    height:30px;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial;
+    color: black;
+    background-color: #fff;
+    line-height: 30px;
+    outline:0;
+}
+#search{
+    padding-left: 16px;
+    white-space: nowrap;
+    width: 600px;
+    text-align: right;
+}
+#searchtab{
+    border:1px solid rgb(224, 220, 220);
+    
+}
+
+.s_btn_wr{
+    width: 103px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #cccc;
+}
+.btn{
+    width: 104px;
+    height: 38px;
+    padding: 0;
+    line-height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    /* outline: 0;
+    padding: -2px; */
+    background-color: #38f;
+    color: #fff;
+    font-family: Arial;
+    border: 0px solid #38f;
+    border-bottom: 1px solid #2e7ae5;
+    border-radius: 3px;
+}
+.help{
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: Arial;
+    font-size: small;
+    padding-left: 12px;
+}
+#menu{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #01204f;
+    margin-top: 18px;
+}
+.menu-listul{
+    list-style-type: none;
+}
+.menu-list{
+    text-align: center;
+    padding: 10px;
+    margin-left:150px ;
+}
+.menu-listul li{
+    display: inline;
+}
+.menu-listul li a{
+    color: #ebebeb;
+    font-weight: bold;
+    font-family: Arial;
+    font-size:15px;
+    text-decoration: none;
+    margin: 8px;
+}

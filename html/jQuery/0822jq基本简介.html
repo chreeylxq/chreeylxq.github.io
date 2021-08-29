@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.js"></script>
+    <title>Document</title>
+    <script>
+
+        //  入口函数
+        // 1.原生入口函数 JS等待加载
+        //  执行时机：必须等待网页全部加载完毕（包括图片等），然后再执行包裹函数
+        //  执行次数：只能执行一次，如果有二次，那么第一次的执行结果会被覆盖
+        window.onload = function () {
+
+        };
+        // 2.jQuery的入口函数  JQ等待加载
+        //  执行时机：只需要等待网页中的 DOM 结构加载完毕，即可执行代码
+        //  执行次数：可以执行多次，后面执行的内容不会覆盖前面执行的结果   简写：$(function(){    });     
+        $(document).ready(function () {
+
+        });
+
+        // 区别：
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>这是一个标题</h2>
+    <p>这是一个段落</p>
+    <p>这是另一个段落</p>
+    <button>点击</button>
+</body>
+
+</html>

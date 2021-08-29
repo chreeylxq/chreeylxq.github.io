@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=divice-width,initial-scale=1">
+    <!-- 移动端一定要加该标签 -->
+    <style>
+        /* 电脑尺寸    屏幕尺寸大于980px时候，该样式生效 */
+       @media (min-width:980px) {
+           p{
+               color: rebeccapurple;
+           }
+       }
+       /* 手机尺寸 */
+       @media (max-width:620px) {
+           p{
+               color: red;
+               font-size: larger;
+           }
+       }
+       /* ipad尺寸 */
+       @media (min-width:621px) and (max-width:979px) {
+           p{
+               color: yellow;
+           }
+       }
+    </style>
+</head>
+<body>
+    <p>文字</p>
+</body>
+</html> 
+     <!-- 
+            620px   980px
+     -->

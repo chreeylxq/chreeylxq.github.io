@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="images/img1.jpg" alt="" id="pic">
+    </div>
+    <button id="start">开始</button>
+    <button id="end">结束</button>
+    <script>
+        
+        // var num=0;
+
+        
+        // 随机数 random()
+
+        // 定时器
+        // setInterval(函数function(){执行代码},时间ms)
+        // setInterval(function(){
+        //     // console.log(parseInt(Math.random()*100));
+        // },1000)
+        
+        var pics = ['images/img1.jpg','images/img2.jpg','images/img3.jpg','images/p1.jpg','images/p2.jpg','images/p3.jpg','images/p4.jpg']   
+        var timer;
+        console.log(pics[1]);
+        console.log(pics.length)
+        console.log(pics[6])
+        function $(x){
+            return document.getElementById(x);
+        }
+
+        $('start').onclick = function(){
+            clearInterval(timer);  //防止定时器叠加
+            timer = setInterval(function(){
+                var numb = parseInt(Math.random()*(pics.length));
+                console.log(numb);
+                $('pic').setAttribute('src',pics[numb]);
+            },100);
+        }
+        $('end').onclick = function(){
+            clearInterval(timer);  //清除定时器
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 500px;
+            height: 400px;
+            background: burlywood;
+            outline: none;
+            transition: all 2s;
+        }
+
+        .box {
+            border-radius: 50%;
+            background: cornflowerblue;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background: coral;
+        }
+    </style>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        // $(function () {
+        //     $('div').mouseenter(function (event) {
+        //         console.log('进入div');
+        //     });
+        //     $('div').mouseleave(function (event) {
+        //         console.log('离开div');
+        //     })
+        // });
+
+        // $(function () {
+        //     $('div').hover(function (event) {
+        //         console.log('into')
+        //     }, function (event) {
+        //         console.log('leave')
+        //     });
+        // })
+
+        $(function () {
+            $('div').hover(function (event) {
+                $(this).toggleClass('box');
+            })
+        })
+    </script>
+</head>
+<!-- 
+    mouseover 和 mouseout 会出发子元素，效率太低
+    mouseenter 和mouseleave 不会出发子元素
+
+    hover 是 mouseenter 和 mouseleave 的复合事件
+    $('标签').hover(function(){鼠标移入执行的指令},function(){鼠标移除执行的指令})
+    $('标签').hover(function(){鼠标移入移除都执行的指令})
+ -->
+
+<body>
+    <div class="box">
+        <p></p>
+    </div>
+</body>
+
+</html>

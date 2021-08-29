@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <style>
+        img {
+            position: fixed;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(document).mousemove(function (event) {
+                var x = event.clientX + 10;
+                var y = event.clientY + 10;
+                $('img').css({ 'left': x, 'top': y });
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <img src="../images/p3.jpg" alt="">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

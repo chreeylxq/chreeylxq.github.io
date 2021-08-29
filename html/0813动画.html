@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background:coral;
+            transition: all 1s;   /*让变化的样式中间过程可见 */
+            height: 100px;
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <div id="box"></div>
+
+    <script>
+        function $(x){
+            return document.getElementById(x);
+        }
+
+        //如果想让加载页面的时候执行动画，动画放置在单次定时器里面
+        //setTimeOut(function(){},时间) 只执行一次
+        setTimeout(() => {
+            $('box').style.transform = 'translate(800px,0px) rotate(3600deg)';
+            $('box').style.borderRadius='50%';
+            $('box').style.background = 'yellow';
+        }, 1);
+        $('btn').onclick = function(){
+            // $('box').style.height='200px';
+            // $('box').style.width='200px';
+           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $('span').click(function (event) {
+                // var index = $(this).index();
+                // alert(index);
+                // 直接 $(this).index() 获取的是同级标签的索引值
+
+                var index = $(this).index('span');
+                alert(index);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li>
+            <span>这是一个span</span>
+            <div></div>
+        </li>
+        <li>
+            <span>这是一个span</span>
+            <div></div>
+        </li>
+        <li>
+            <span>这是一个span</span>
+            <div></div>
+        </li>
+        <li>
+            <span>这是一个span</span>
+            <div></div>
+        </li>
+    </ul>
+</body>
+
+</html>

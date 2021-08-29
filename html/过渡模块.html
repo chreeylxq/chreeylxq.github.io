@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            cursor: pointer;
+            transition: all 2s;
+            /* 过渡样式： 
+                   第一个值 指定带有动画的样式 一般都是all
+                   第二个值 时间
+             */
+        }
+        div:hover{
+            background: blue;
+            transform: rotate(180deg);
+            /* width: 200px; */
+            border-radius: 50%;
+        }
+        .one{
+            border-radius: 50%;
+            transform: translate(-200px,0px) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+</body>
+</html>

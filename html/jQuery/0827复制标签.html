@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            width: 300px;
+            overflow: hidden;
+            margin: 40px 20px;
+            float: left;
+        }
+    </style>
+    <script>
+        $(function () {
+            var arr = ['../images/p2.jpg', '../images/p3.jpg', '../images/p4.jpg'];
+            $('button').click(function (event) {
+                for (var i = 0; i < arr.length; i++) {
+
+                    // .clone()  复制标签 
+                    // .clone(a) 复制标签  若 a 是true 复制事件，若 a 是false ，则不复制标签事件
+                    var cloneTag = $('ul li').eq(0).clone();
+                    cloneTag.children('img').attr('src', arr[i]);
+                    $('ul').append(cloneTag);
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>按钮</button>
+    <ul>
+        <li>
+            <img src="../images/p1.jpg" width="300px" alt="">
+            <p>这是一张图片</p>
+        </li>
+    </ul>
+</body>
+
+</html>

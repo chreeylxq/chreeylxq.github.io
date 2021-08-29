@@ -1,0 +1,111 @@
+.header{
+    height: 66px;
+    background: lightcoral;
+}body{
+    background: #f5f5f5;
+}
+.main{
+    width: 1210px;
+    height: 513px;
+    background: #f5f5f5;
+    margin: 25px auto;
+}.list{
+    width: 1210px;
+    height: 36px;
+    margin: 25px auto;
+    background: transparent;
+}.wrap{
+    width: 1210px;
+    overflow: hidden;
+    margin: 0px auto;
+    background: #f5f5f5;
+}.main .left{
+    width: 907px;
+    height: 513px;
+    background: lightsalmon;
+    float: left;
+}.main .right{
+    width: 290px;
+    height: 513px;
+    background: lightsalmon;
+    float: right;
+}.main .right li{
+    width: 290px;
+    height: 163px;
+    margin-bottom: 12px;
+    background: lightslategrey;
+    overflow: hidden;
+    position: relative;
+}.main .right p{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4px 15px 6px;
+    line-height: 20px;
+    width: 260px ;
+}.list li{
+    width: 118px;
+    border: 1px solid rgb(155, 153, 153);
+    float: left;
+    line-height: 34px;
+    margin-right: 16px;
+    padding-left: 12px;
+}.list .current{
+    border-color: #da4b44;
+    color: #da4b44;
+}.wrap li{
+    width: 290px;
+    height: 314px;
+    border-bottom: 1px solid #ccc;
+    background: wheat;
+    float:left;
+    margin-right: 16px;
+    margin-bottom: 12px;
+    position: relative;
+}.wrap li:nth-of-type(4n){
+    margin-right: 0px;
+}
+.wrap div{
+    width: 290px;
+    height: 193px;
+    overflow: hidden;
+}
+.wrap p{
+    padding: 0px 12px;
+   
+}.wrap .des{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-top: 14px;
+    height: 48px;
+}
+.wrap .time{
+    float: left;
+}
+.wrap .zan{
+    float: right;
+    margin-left: 66px;
+}
+.wrap .num{
+    float: right;
+    
+}
+.wrap b{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background: rgb(236, 215, 26);
+    transform: rotate(-30deg);
+    font-weight: normal;
+}
+

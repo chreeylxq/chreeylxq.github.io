@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="0815ppt.css">
+
+
+</head>
+
+
+<body>
+    <div class="slideShow">
+        <div id="sc" class="slideContainer">
+            <div class="mySlide fade">
+                <div class="numberText">1 / 3</div>
+                <img src="images/img1.jpg" alt="">
+                <div class="txt">文本1</div>
+            </div>
+            <div class="mySlide fade">
+                <div class="numberText">2 / 3</div>
+                <img src="images/img2.jpg" alt="">
+                <div class="txt">文本2</div>
+            </div>
+            <div class="mySlide fade">
+                <div class="numberText">3 / 3</div>
+                <img src="images/img3.jpg" alt="">
+                <div class="txt">文本3</div>
+            </div>
+
+        </div>
+        <span id="prev" class='prev' onclick="oprev()">❮</span>
+        <span id="next" class='next' onclick="onext()">❯</span>
+    </div>
+    <div class="dotsList" style="text-align: center;">
+        <span class="dot current"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script src="0815ppt.js"></script>
+
+</body>
+
+
+</html>

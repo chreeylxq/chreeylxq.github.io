@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid red; */
+            background: red;
+            transform: rotate(30deg);
+            /* 旋转：正值顺时针，负值逆时针 */
+            /* transform: scale(0.3); */
+            /* 缩放：0-1缩小 大于1放大 */
+            transform: scale(1,0.3);
+            /* 水平方向不变，垂直方向缩小到0.3 */
+            transform: translate(100px,100px);
+            /* 位移：第一个值：水平  第二个值：垂直 */
+            /* 任何转换之后占得位置都是原来的位置 */
+            transform: scale(1,0.3) translate(100px,100px) rotate(40deg);
+            /* 可以书写多个值，值和值之间用空格隔开
+               图形旋转之后。坐标系也会随之改变， */
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>文字</p>
+</body>
+</html>

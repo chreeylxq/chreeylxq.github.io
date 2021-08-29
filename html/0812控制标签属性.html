@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+        }
+       
+        body{
+            background: url('images/img1.jpg') no-repeat center center;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/img1.jpg" alt="">
+    <img src="images/img2.jpg" alt="">
+    <img src="images/img3.jpg" alt="">
+
+    <input type="checkbox" id="sel">
+
+    <script>
+        var pics = document.getElementsByTagName('img');
+        var osel = document.getElementById('sel');
+        // pics[0].onmouseover = function(){
+        //     this.setAttribute('src','images/img2.jpg');
+        //     this.setAttribute('title','鼠标移入啦');
+        //     osel.setAttribute('checked','checked');
+
+        //     // body是唯一的 document.body获取body标签
+        //     // 在js中 单引号和双引号用法是一样的，但是不能嵌套自身 只能交叉嵌套
+        //     document.body.style.background='url("images/img2.jpg") no-repeat'
+        // }
+       
+        // pics[0].onmouseout = function(){
+        //     this.setAttribute('src','images/img3.jpg');
+        //     this.removeAttribute('title');
+        //     console.log(this.getAttribute('src'));
+        //     osel.removeAttribute('checked');
+        //     document.body.style.background='url("images/img3.jpg") no-repeat'
+
+        // }
+
+        for( var i= 0; i<pics.length; i++){
+
+            pics[i].onclick = function(){
+                document.body.style.background = 'url('+this.getAttribute('src')+') no-repeat';
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundAttachment = 'fixed';
+            }
+        }
+
+         
+
+        /*
+            标签属性：src alt title href disabled(禁止表单输入) check
+            设置标签属性： setAttribute('属性','属性对应的值')  如果原标签没有该属性，表示追加
+
+            获取标签属性的值：getAttribute('属性')        
+        */ 
+    </script>
+
+</body>
+</html>

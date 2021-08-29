@@ -1,0 +1,11 @@
+*{box-sizing: border-box;}
+body{font-family: Verdana,sans-serif;}
+.mySlides{display: none;}
+
+/* 幻灯片容器 */
+.slideshow-cantainer{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+

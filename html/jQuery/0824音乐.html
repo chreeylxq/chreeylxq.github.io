@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function (event) {
+                if ($(this).html() == '播放') {
+                    $('audio')[0].currentTime = 0;
+                    // 单位s ，设置播放开始时间
+                    $('audio')[0].play();
+                    $('button').html('暂停');
+                } else {
+                    $('audio')[0].pause();
+                    $('button').html('播放');
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button>播放</button>
+    <audio src="../music/小星星.mp3" controls></audio>
+</body>
+
+</html>

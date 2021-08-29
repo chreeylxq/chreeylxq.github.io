@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var m= 100;
+        function add(){
+            console.log(m);
+            var m=10;
+        }
+        add();
+        //运行之后打印为undefined  
+        /*
+            该代码等价于
+            var m = 100;
+            function add(){
+                var m;  声明提前
+                console.log(m);
+                m = 10;
+            }
+
+            变量提升：把变量的声明提升到整个作用域的最前面
+            声明一个变量，不论在什么地方声明，声明都会提前，赋值不会提前
+        */
+    </script>
+</body>
+</html>

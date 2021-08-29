@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        $(function () {
+            $('a').click(function (event) {
+                // 阻止默认行为， a 跳转链接， 提交表单
+                // 1.return false;  (return false 既可以阻止默认行为 又可以阻止冒泡事件)
+                // 2.event.preventDefault();
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <a href="https://www.baidu.com">百度</a>
+    <input type="text" name="" id="">
+</body>
+
+</html>

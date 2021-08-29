@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+ul{
+    margin-top: 40px;
+}
+ul li{
+    width: 100px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    margin: 20px 20px 0px 0px;
+    background:wheat;
+    float: left;
+    position: relative;
+
+}
+li span{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    background: tomato;
+    display: none;
+    z-index: 10;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+
+            $('button').click(function (event) {
+                // 创建一个新标签
+                var tag = $('<h1></h1>');
+                tag.html('这是一个新标签');
+
+                // 添加到网页中
+
+                // $('a').append(b)  把b追加到a内部的后面
+                // $('body').append(tag);
+
+                // $('a').prepend(b)  把b追加到a内部的前面
+                // $('body').prepend(tag);
+
+                // $('a').before(b)  把b 追加到a同级之前
+                // $('button').before(tag);
+
+                // $('a').after(b)  把 b 追加到 a 同级之后
+                $('button').after(tag);
+
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>按钮</button>
+</body>
+
+</html>

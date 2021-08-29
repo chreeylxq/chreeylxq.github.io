@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            /*// var btn = document.getElementById('btn');
+            // var flag = 0;
+            // $(btn).click(function (event) {
+            //     $(btn).css('color', 'red');
+
+// play（）是原生方法
+            // document.getElementById('music').play();
+            // $('audio')[0].play();等价于下面的写法
+            // $('audio').get(0).play();
+
+// 给 id为btn的按钮写播放/暂停功能按钮
+            if (flag == 0) {
+                $('audio')[0].play();
+                $(btn).html('暂停');
+                flag = 1;
+            } else {
+                $('audio')[0].pause();
+                $(btn).html('播放');
+                flag = 0;
+            }
+        });*/
+
+
+            /*// 选择到具体某一个标签  .eq(index)
+                            $('button').click(function(event){
+           
+                          });*/
+
+
+            /* // jq中  .index()获取用户当前操作标签的索引值  索引值从0开始
+                         $('button').click(function (event) {
+                             console.log($(this).index());
+                         });*/
+
+
+
+            // $('button')选择上下文所有的button
+            //  $('button').click(function (event) {
+
+            //     // this代表用户当前操作的标签  this是dom对象
+            //     $(this).css('color', 'red');
+            //     $(this).html('点击了')
+            // });
+
+
+
+
+        });
+    </script>
+    <!-- 
+        jq对象：$()选择出来的标签
+        dom对象：用原生方法获取的标签就是dom对象
+
+        把dom对象转化为jq对象   $(dom对象)
+
+        把jq对象转化为dom对象   jq对象[index] 或者  jq对象.get(index).原生方法  对应选择第index个标签
+
+     -->
+
+</head>
+
+<body>
+    <button id="btn">播放</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+
+    <audio src="../music/小星星.mp3" id="music" controls></audio>
+</body>
+
+</html>

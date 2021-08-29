@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for循环中定义的变量是全局变量
+        for(var i=0; i<10; i++){
+            console.log('hello')
+            var m= 100;
+
+        }
+        console.log(m);//可以打印，结果为100
+        console.log(i);//打印结果为11
+
+
+        //匿名函数，没有变量名的函数 
+
+        //在js中，只有函数的作用域
+        // 在函数中定义的变量（局部变量）的作用范围：找距离该变量最近的开始的函数的大括号，该变量的作用范围就是找到的大括号内部的区域
+        function add(){
+            var m= 100;  // m的作用只在add中起作用
+        }
+        console.log(m); //打印出错
+    </script>
+</body>
+</html>

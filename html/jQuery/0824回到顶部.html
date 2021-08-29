@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        button {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .music {
+            right: 200px;
+            bottom: 10px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            /*
+            // 窗口滚动事件，每移动1px就会触发一次
+            $(window).scroll(function (event) {
+
+                // $(window).scrollTop() 滚动坐标，滚动条距离页面顶部的px数
+                if ($(window).scrollTop() > 500)
+                    $('button').html('回到顶部');
+                else $('button').html('星座运势');
+            });
+
+            $('button').click(function (event) {
+
+                // $(window).scrollTop(100) 设置滚动坐标
+                // $(window).scrollTop(100);
+
+                // scrollTop 在css中没有该样式  但是比较特别  可以通过animate修改
+                // 事件源是 html body
+                // $('html,body').animate({ 'scrollTop': '0' });
+
+                // 标签.offset().top 表示该标签距离页面原点的坐标
+                console.log($('.box').offset().top);
+                $('html,body').animate({ 'scrollTop': $('.box').offset().top }, 1000)
+            });*/
+
+
+            // 添加滚动事件
+            $(window).scroll(function (event) {
+                // 创建滚动条
+                if ($(window).scrollTop() > $(window).height())
+                    $('button.star').html('回到顶部');
+                else $('button.star').html('星座运势');
+            });
+
+
+            // 添加回到顶部事件
+            $('button').click(function (event) {
+                $('html,body').animate({ 'scrollTop': 0 }, 500);
+            });
+
+            // $('标签').offset()  获取标签距离原点的距离（top  left）
+            // $('标签').offset().top  获取标签距离原点的上距离
+            console.log($('.box').offset());
+            $('.music').click(function (event) {
+                $('html,body').animate({ 'scrollTop': $('.box').offset().top - 50 }, 500);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button class="star">星座运势</button>
+    <button class="music">音乐</button>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>56</li>
+        <li>7</li>
+        <li>23</li>
+        <li>34</li>
+        <li>34</li>
+        <li>45</li>
+        <li>6</li>
+        <li>33333333333333</li>
+        <li>2</li>
+        <li>35</li>
+        <li>4</li>
+        <li>89</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="box">sdfsdgdfh</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

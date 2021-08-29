@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        <button></button>
+        <input type="button">
+        区别：单双标签  https://blog.csdn.net/u010458114/article/details/79371304
+     -->
+
+     <button id="btn">按钮</button>
+     <script>
+         var obtn = document.getElementById('btn');
+        //  obtn.innerHTML='修改之后的';
+
+        console.log(obtn);
+        obtn.onmouseover = function(){
+            console.log(this);
+            // this只在事件中出现，代表用户当前操作的对象，现在是标签
+            obtn.innerHTML = '修改之后的';
+            obtn.style.color='grey';
+            obtn.style.border = '2px solid pink';
+            obtn.style.fontSize = '40px'  ;
+            obtn.style.background='transparent'
+        }
+        obtn.onmouseout = function(){
+            obtn.innerHTML = '按钮';
+            obtn.style.color='black';
+        }
+     </script>
+</body>
+</html>
