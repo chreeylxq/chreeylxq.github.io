@@ -20,8 +20,6 @@ $(function () {
         // 点击时文字转动
         $('section div').eq($(this).index()).removeClass('desc');
         $('section div').eq($(this).index()).siblings().addClass('desc');
-
-
     });
 
 
@@ -29,9 +27,6 @@ $(function () {
         //Chorme
         var wheel = event.originalEvent.wheelDelta;
         var detal = event.originalEvent.detail;
-
-
-
 
 
         if (event.originalEvent.wheelDelta) { //判断浏览器IE,谷歌滚轮事件               
@@ -47,7 +42,8 @@ $(function () {
             if (numb > 5) {
                 numb = 5;
             }
-            console.log('numb:' + numb);
+
+            $('section').stop(true);
             $('section').animate({ 'top': -numb * 100 + '%' });
 
             // 对应圆圈变色
