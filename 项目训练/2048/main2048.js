@@ -212,26 +212,29 @@ document.addEventListener('touchend', function (event) {
             }
         }
     } else {
-        // y轴
         if (deltay > 0) {
+            // y轴
             // move down
             if (moveDown()) {
                 setTimeout("generateOneNumber()", 300);
                 needUpdateBoard = true;
             }
-
-        } else {
+        }
+        else {
             // move up
             if (moveUp()) {
                 setTimeout("generateOneNumber()", 300);
                 needUpdateBoard = true;
             }
         }
+
     }
     if (needUpdateBoard) {
         setTimeout("updateBoardView()", 200);
         setTimeout("isgameover()", 200);
     }
+
+
 });
 
 
