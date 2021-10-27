@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-jsonp</title>
+    <script src="../../../../html/jQuery/jquery-3.6.0.js"></script>
+</head>
+<style>
+    .result {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #345;
+    }
+</style>
+
+<body>
+    <button>点击发送jsonp请求</button>
+    <div class="result"></div>
+</body>
+<script>
+
+    // 用 JQuery 去写 jsonp 就是 jQuery 内置了一个处理 jsonp 的函数 callback 函数，不需要另外写 handle 函数去处理 可以直接拿到数据，处理数据  
+    $('button').eq(0).click(function () {
+        // 获取的服务请求之后必须加  ?call=? 固定写法
+        $.getJSON('http://localhost:8000/jquery-server?callback=?', function (data) {
+            $('.result').html(`
+                名称：${data.name}<br>
+                城市：${data.city}
+            `)
+        })
+    })
+</script>
+
+</html>

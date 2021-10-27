@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../delstyle.css">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 100%;
+
+            list-style-type: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        ul li {
+            float: left;
+            display: block;
+            padding: 0px 10px;
+            height: 50px;
+            border: 0.5px solid #ddd;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #337ab7;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+
+        .content div {
+            display: none;
+        }
+
+        div.active {
+            display: block;
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+        <div class="content">
+            <div id="home" class="active">这是home</div>
+            <div id="profile">这是profile</div>
+            <div id="messages">这是messages</div>
+            <div id="settings">这是settings</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jQuery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .glyphicon {
+        font-size: 20px;
+        color: coral;
+    }
+
+    .glyphicon-fire,
+    .glyphicon-heart-empty {
+        font-size: 20px;
+        color: red;
+    }
+
+    /* .dropdown-menu {
+        min-width: initial;
+        width: 100px;
+        overflow-x: auto;
+    } */
+    /* .dropup {
+        margin-top: 150px;
+    } */
+</style>
+
+<body>
+    <div class="visible-md">asda</div>
+    <div class="hidden-md">12131</div>
+
+    <!-- 字体图标 -->
+    <span class="glyphicon glyphicon-question-sign"></span>
+    <span class="glyphicon glyphicon-fire"></span>
+    <p class="glyphicon glyphicon-heart-empty"></p>
+
+    <!-- 下拉列表 -->
+    <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header">标题1</li>
+            <!-- 增加标题 -->
+            <li class="disabled"><a href="#">Action</a></li>
+            <!-- 禁用项：disabled -->
+            <li><a href="#">Another action</a></li>
+            <li class="dropdown-header">标题2</li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider" role="separtor"></li>
+            <!-- divider 增加一条分割线 -->
+            <li><a href="#">Separator link</a></li>
+        </ul>
+    </div>
+
+    <!-- 按钮组 -->
+    <div class="btn-group" role="group" aria-label="...">
+        <button class="btn btn-default btn-lg" type="button">Left</button>
+        <button class="btn btn-default" type="button">Middle</button>
+        <button class="btn btn-default" type="button">Right</button>
+        <div class="btn-group" role="group">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

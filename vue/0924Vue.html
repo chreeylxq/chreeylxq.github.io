@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="counter">
+        Counter:{{counter}}
+    </div>
+
+    <!-- 绑定元素的 attribute -->
+    <div id="bind-attribute">
+        <!-- 将该元素节点的 title 和当前活跃实例的 message property 保持一致
+             v- 表示Vue 提供的特殊 attribute -->
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+    </div>
+
+    <div class="demo">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <div class="two-way-binding">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+
+</body>
+
+<script>
+    const Counter = {
+        data() {
+            return {
+                counter: 0,
+            }
+        }
+    }
+
+    // 创建Vue应用
+    Vue.createApp(Counter).mount(".counter");
+
+
+
+
+    const AttributeBinding = {
+        data() {
+            return {
+                message: 'You loaded this page on' + new Date().toLocaleString()
+            }
+        }
+    }
+    Vue.createApp(AttributeBinding).mount('#bind-attribute')
+
+
+    // 处理用户输入
+    const EventHandling = {
+        data() {
+            return {
+                message: "Hello Vue.js!"
+            }
+        },
+        methods: {
+            reverseMessage() {
+                this.message = this.message
+                    .split('')
+                    .reverse()
+                    .join('')
+            }
+        }
+
+    }
+    Vue.createApp(EventHandling).mount(".demo");
+
+    const TwoWayBinding = {
+        data() {
+            return {
+                message: "Hello Vue!",
+            }
+        }
+    }
+    Vue.createApp(TwoWayBinding).mount(".two-way-binding");
+</script>
+
+</html>

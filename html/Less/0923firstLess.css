@@ -1,0 +1,28 @@
+.container {
+  width: 600px;
+  height: 800px;
+  background: #987;
+}
+.container header {
+  height: 100px;
+  background: #345;
+}
+.container section {
+  height: 400px;
+  background: #456;
+}
+.container section:hover {
+  background: #567;
+}
+.container section::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #123;
+}
+@media screen and (max-width: 590px) {
+  .container section {
+    background: #901;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello word</h1>
+    <button>点击获取用户数据</button>
+</body>
+<script>
+    const btns = document.querySelectorAll('button');
+
+
+    btns[0].onclick = function () {
+        const xhr = new XMLHttpRequest();
+
+        // 这里因为是满足同源策略的，所以 url 可以简写
+        // 用户数据从9000端口来  页面数据也是从9000端口 两者属于同源，可以直接发送AJAX请求
+        xhr.open('GET', '/data');
+
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log(xhr.response);
+                }
+            }
+        }
+
+    }
+</script>
+
+</html>

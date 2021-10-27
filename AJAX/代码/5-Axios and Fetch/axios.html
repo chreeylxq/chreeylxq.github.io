@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <title>axios</title>
+</head>
+
+<body>
+    <button>GET</button>
+    <button>POST</button>
+    <button>AJAX</button>
+</body>
+<script>
+    const btns = document.querySelectorAll('button');
+
+    // 配置 baseURL
+    axios.defaults.baseURL = 'http://localhost:8000';
+
+    btns[0].onclick = function () {
+        // GET请求
+        axios.get('/Axios-server', {
+            // URL 参数
+            params: {
+                id: 100,
+                vip: 6,
+            },
+
+            // 请求头信息
+            headers: {
+                name: 'luxiaoqian',
+                age: 24,
+            },
+
+        }).then(value => {
+            console.log(value);
+        })
+    }
+
+    btns[1].onclick = function () {
+        axios.post('Axios-server', {
+            // 请求体
+            data: {
+                username: 'admin',
+                password: 'admin'
+            }
+        }, {
+
+            // url 请求
+            params: {
+                id: 200,
+                vip: 12
+            },
+
+            // 请求头
+            headers: {
+                height: 100,
+                width: 200
+            },
+
+
+        })
+    };
+
+    btns[2].onclick = function () {
+        axios({
+            // 请求方法
+            method: 'POST',
+            // url
+            url: '/axios-server',
+            // url 参数
+            params: {
+                vip: 10,
+                level: 30
+            },
+            headers: {
+                a: 100,
+                b: 200,
+            },
+            data: {
+                username: 'admin',
+                password: 'admin'
+            }
+        }).then(value => {
+            console.log(value)
+        })
+    }
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jQuery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            height: 50px;
+            position: relative;
+
+        }
+
+        .change {
+            width: 200px;
+            height: 200px;
+            background: rosybrown
+        }
+
+        input[type=range] {
+            width: 200px !important;
+            border-radius: 15px;
+            margin-top: 8px;
+            /*上部分的填充值*/
+            outline: none;
+            -webkit-appearance: none;
+            /*清除系统默认样式*/
+            /* background: -webkit-linear-gradient(#ffa200, #ffa200) no-repeat #ececec;
+            background-size: 0% 100%; */
+            height: 10px;
+
+        }
+
+        input[type="range"].red::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: red;
+            transition: 0.2s linear;
+
+        }
+
+        input[type="range"].green::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: green;
+            transition: 0.2s linear;
+
+        }
+
+        input[type="range"].blue::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: blue;
+            transition: 0.2s linear;
+        }
+
+        input[type="range"]:hover::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        input[type=range].red {
+            background: -webkit-linear-gradient(red, red) no-repeat #ececec;
+            background-size: 0% 100%;
+        }
+
+        input[type=range].green {
+            background: -webkit-linear-gradient(green, green) no-repeat #ececec;
+            background-size: 0% 100%;
+        }
+
+        input[type=range].blue {
+            background: -webkit-linear-gradient(blue, blue) no-repeat #ececec;
+            background-size: 0% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <input id="R" class="red" type="range" value="0" min="0" max="255" oninput="change(this)"><br>
+        <input id="G" class="green" type="range" value="0" min="0" max="255" oninput="change(this)"><br>
+        <input id="B" class="blue" type="range" value="0" min="0" max="255" oninput="change(this)"><br>
+
+
+        <div id="colorBlock" class="change"></div>
+
+    </div>
+</body>
+<script>
+    function change(e) {
+        var redVal = R.value;
+        var greenVal = G.value;
+        var blueVal = B.value;
+        $(e).css('background-size', e.value / 255 * 100 + '% 100%');
+
+        colorBlock.style.background = 'rgb(' + redVal + ',' + greenVal + ',' + blueVal + ')';
+    }
+
+</script>
+
+</html>

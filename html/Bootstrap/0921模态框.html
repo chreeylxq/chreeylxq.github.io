@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jQuery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <buttton type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </buttton>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Text in a modal</h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                    <h4>Popover in a modal</h4>
+                    <p>
+                        This
+                        <a href="#" role="button" class="btn btn-default popover-test" title
+                            data-content="And here's some amazing content. It's very engaging. right?"
+                            data-original-title="A Title">button</a>
+                        should trigger a popover on click.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="button">Save changes</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-default popover-test">fgsdgs</button>
+    <div class="dropdown">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown trigger
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+            ...
+        </ul>
+    </div>
+    <div class="dropdown">
+        <a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown trigger
+            <span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+            ...
+        </ul>
+    </div><br><br><br><br>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        ...
+        <div id="navbar-example">
+            <ul class="nav nav-tabs" role="tablist">
+                ...
+            </ul>
+        </div>
+        ...
+    </body>
+
+
+
+
+
+</body>
+<script>
+    // $(function () {
+    //     $('#myModal').on('show.bs.modal', function () {
+    //         alert('在show方法调用时触发')
+    //     })
+    //     $('#myModal').on('shown.bs.modal', function () {
+    //         alert('在模态框完全显示出来，并等css动画完成后触发');
+    //     });
+    //     $('myModal').on('hide.bs.modal', function () {
+    //         alert('在hide方法被调用时触发');
+    //     });
+    //     $('myModal').on('hiden.bs.modal', function () {
+    //         alert('在模态框完全隐藏，并等css动画完成后触发');
+    //     });
+    // });
+
+    $(function () {
+        // $('#myModal').modal({
+        //     Keyboard: false
+        // });
+
+
+
+        $('#myModal').on('show.bs.modal', function () {
+            alert('show方法调用后立即触发该事件');
+        });
+        $('#myModal').on('hide.bs.modal', function () {
+            alert('hide方法调用后立即触发该事件')
+        });
+        $('#myModal').on('hidden.bs.modal', function () {
+            alert('模态框完全隐藏之后，并等css过渡效果完成之后被触发');
+        });
+
+    });
+</script>
+
+</html>

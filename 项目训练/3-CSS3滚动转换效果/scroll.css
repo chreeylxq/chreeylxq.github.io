@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100%;
+    height:200vh;
+    background: #111;
+}
+section{
+    position: absolute;
+    width: 100%;
+    /* height:100%; */
+    height: calc(100% - 300px);
+    background:#2abbff; 
+}
+section .curve{
+    position: absolute;
+    bottom: -300px;
+    height:300px;
+    width:100%;
+    transform-origin: top;
+    /* 从顶部开始缩小  默认从底部变换 */
+
+}
+section .curve img{
+    width:100%;
+    height:100%;
+   
+}
+.content{
+    font-size: 4.5em;
+    position: absolute;
+    display: block;
+    width: 900px;
+    height: 450px;
+    overflow:hidden;
+    color:#fff;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin:-150px 0 0 -450px ;
+}

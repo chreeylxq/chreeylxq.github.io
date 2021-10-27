@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsonp实践</title>
+</head>
+
+<style>
+    span {
+        color: #f00;
+        font-size: 10px;
+    }
+</style>
+
+<body>
+    <label for="">username:</label>
+    <input type="text" id="username">
+    <span></span>
+</body>
+<script>
+    const input = document.getElementById('username');
+    const spans = document.getElementsByTagName('span');
+    // 声明 handl 函数
+    function handl(data) {
+        input.style.border = 'solid 1px #f00';
+        // 修改 p 标签提示文本
+        spans[0].innerHTML = data.msg;
+    }
+    input.onblur = function () {
+        // 获取用户的输入值
+        let username = this.value;
+        // 向服务器发送请求 检测用户是否存在
+        // 1.创建 script 标签
+        const script = document.createElement('script');
+        // 2.设置 script 的 src 属性
+        script.src = 'http://localhost:8000/check-server';
+        // 3.将 script 插入文本
+        document.body.appendChild(script);
+    }
+</script>
+
+</html>

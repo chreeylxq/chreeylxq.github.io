@@ -9,15 +9,33 @@
     <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
+<style>
+    /* .col-md-6 {
+        background-color: #dedef8;
+        box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+
+    } */
+
+    .col-md-3,
+    .col-md-9 {
+        background-color: #dedef8;
+        box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+    }
+
+    .col-md-6 {
+        background-color: #b18904;
+        box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+    }
+</style>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-sm-3"
+            <div class="col-xs-3 col-sm-6"
                 style='background-color: #dedef8; box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <div class="col-xs-6 col-sm-3"
+            <div class="col-xs-3 col-sm-6"
                 style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -29,13 +47,13 @@
                 </p>
             </div>
             <div class="clearfix visible-xs"></div>
-            <div class="col-xs-6 col-sm-3"
+            <div class="col-xs-3 col-sm-6"
                 style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
                     laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
             </div>
-            <div class="col-xs-6 col-sm-3"
+            <div class="col-xs-3 col-sm-6"
                 style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -43,8 +61,624 @@
                 </p>
             </div>
         </div>
+    </div> -->
+
+    <!-- <h1>偏移列</h1>
+    <div class="container">
+        <h1>Hello World</h1>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <h1>Hello World</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>第一列</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-9">
+                <h4>第二列-分为四个盒子</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Consectetur art party Tonx culpa semiotics. Pinterest assumenda minim organic quis.
+                            hjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <h1>I am h1<small>hhhI am subheading</small></h1>
+    <h2>引导主体副本</h2>
+    <p class="lead">这是一个演示引导主体副本用法</p>
+    <small>本行内容在标签内</small>
+    <strong>加粗</strong>
+    <em>倾斜</em>
+    <p class="text-left">向左对齐文本</p>
+    <p class="text-right">向右对齐文本</p>
+    <p class="text-center">居中对齐文本</p>
+    <p class="text-muted">文本内容是减弱的</p>
+    <p class="text-primary">文本内容是带有一个 primary class</p>
+    <p class="text-success">文本内容是带有一个success class</p>
+    <p class="text-info">文本内容是带有一个info class</p>
+    <p class="text-warning">文本内容是带有一个warning class</p>
+    <p class="danger">文本内容是带有一个danger class</p>
+
+    <h5>缩写</h5>
+    <abbr title="world Wide Web">WWW</abbr>
+    <abbr title="Real Simple Syndication" class="initialism">RSS</abbr>
+
+    <blockquote>
+        <p>这是一个默认的引用实例</p>
+    </blockquote>
+    <blockquote>
+        这是一个带有源标题的引用实例。
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+    </blockquote>
+    <blockquote class="pull-right">
+        这是一个向右对齐的引用
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+    </blockquote>
+
+    <h2>列表</h2>
+    <h4>有序列表</h4>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+    <h4>无序列表</h4>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <h4>未定义样式列表</h4>
+    <ul class="list-unstyled">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <h4>内联列表</h4>
+    <ul class="list-inline">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <h4>定义列表</h4>
+    <dl>
+        <dt>Description</dt>
+        <dd>Item 1</dd>
+        <dt>Description</dt>
+        <dd>Item 2</dd>
+    </dl>
+
+    <h4>水平的定义列表</h4>
+    <dl class="dl-horizontal">
+        <dt>Description</dt>
+        <dd>Item 1</dd>
+        <dt>Description</dt>
+        <dd>Item 2</dd>
+    </dl> -->
+
+
+    <h1>Bootstrap 代码</h1>
+
+    <p><code>&lt;header&gt;</code>作为内联元素被包围</p>
+    <p>如果需要把代码显示为一个独立的块元素，请使用&lt;pre&gt;标签：</p>
+    <pre>
+        &lt;article&gt;
+            &lt;h1&gt;Article Heading&lt;/h1&gt;
+        &lt;/article&gt;
+    </pre>
+
+    <div class="container">
+        <h3>代码</h3>
+        x=ab+y
+        <p>使用var元素表示变量：</p>
+        <p>
+            <var>x</var>=<var>a</var><var>b</var>+<var>y</var>
+        </p>
+    </div>
+    <div class="container">
+        <h4>代码</h4>
+        <p>使用kbd元素表示按键输入：</p>
+        <p>使用<kbd>ctrl+p</kbd>来打开打印窗口</p>
+    </div>
+
+    <div class="container">
+        <h3>代码</h3>
+        <p>使用pre元素输出多行：</p>
+        <pre>
+            在pre元素中的文本
+            宽度的现实与文本的宽度一样，
+            保留了  空   格 和
+            换行。
+        </pre>
+        <p>如果你添加 .pre-scrollable 类 ， pre 元素最大的高度 max-height为350px，并生成一个Y轴的滚动条：</p>
+        <pre class="pre-scrollable">在 pre 元素中的文本
+            宽度的显示与文本的宽度一样
+            保留了 空  格  和
+
+
+            换行。
+
+        </pre>
+    </div>
+
+    <div class="container">
+        <h3>代码</h3>
+        <p>使用samp 元素包含电脑输出的内容：</p>
+        <p>This text is not output from a computer program.....</p>
+        <p><samp>This text is output from a computer program.....</samp></p>
+    </div>
+    <div class="container">
+        <h3>代码</h3>
+        <p>以下是HTML元素：<code>span</code>，<code>section</code>,<code>div</code></p>
+    </div>
+
+    <h1>Bootstrap表格</h1>
+    <div class="container">
+        <!-- 表格类 -->
+        <!-- <table class="table"> -->
+        <!-- <table class="table table-striped"> -->
+        <!-- <table class="table table-bordered"> -->
+        <!-- <table class="table table-hover"> -->
+        <!-- <table class="table table-condensed"> -->
+        <table class="table  table-hover table-bordered table-condensed">
+
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Firstname</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="success">
+                    <td>1</td>
+                    <td>Anna</td>
+                </tr>
+                <tr class="active">
+                    <td>2</td>
+                    <td>Debbie</td>
+                </tr>
+                <tr class="danger">
+                    <td>3</td>
+                    <td>John</td>
+                </tr>
+                <tr class="warning">
+                    <td>4</td>
+                    <td>ab</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1>响应式表格</h1>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table">
+                <caption>响应式表格布局</caption>
+                <thead>
+                    <tr>
+                        <td>产品</td>
+                        <td>付款日期</td>
+                        <td>状态</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>产品1</td>
+                        <td>23/11/2021</td>
+                        <td>代发货</td>
+                    </tr>
+                    <tr>
+                        <td>产品2</td>
+                        <td>23/11/2021</td>
+                        <td>发货中</td>
+                    </tr>
+                    <tr>
+                        <td>产品3</td>
+                        <td>23/11/2021</td>
+                        <td>已退货</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h1>表单</h1>
+    <h2>垂直表单/基本表单</h2>
+    <div id="player" class="container">
+        <form role="form" action="">
+            <div class="form-group">
+                <label for="name">名称：</label>
+                <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+                <label for="inputfile">文件输入：</label>
+                <input type="file" class="form-control" id="inputfile" accept='video/*,audio/*,image/*'>
+                <p class="help-block">这里是块级帮助文本的实例</p>
+            </div>
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox">请打勾
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+
+            <input id="bt" class="btn" type="button" value="播放" onclick="AutoVideo()">
+        </form><br>
+
+    </div>
 </body>
+
+<!-- <h1>内联表单</h1>
+<div class="container">
+    <form role="form" class="form-inline">
+        <div class="form-group">
+            <label for="name" class="sr-only">名称</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+        </div>
+        <div class="form-group">
+            <label for="inputFile" class="sr-only">问文件输入</label>
+            <input type="file" id="inputFile">
+        </div>
+        <div class="checkbox">
+            <label for="">
+                <input type="checkbox">请打勾
+            </label>
+        </div>
+        <button value="submit" class="btn btn-default">提交</button>
+    </form>
+</div>
+
+<h1>水平标签</h1>
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <lable for='firstname' class="control-label col-sm-3">名称:</lable>
+        <div class="col-sm-9">
+            <input class="form-control" type="text" id="firstname" placeholder="请输入名称">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputfile" class="control-label col-sm-3">请输入文件:</label>
+        <div class="col-sm-9">
+            <input type="file" id="inputfile">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class=" col-sm-offset-3 col-sm-9">
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox">请记住我
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-9 col-sm-offset-3 ">
+            <button type="submit" class="btn btn-default">提交</button>
+        </div>
+    </div>
+</form> -->
+
+<h2>文本框</h2>
+<div class="container">
+    <form role="form">
+
+        <div class="form-group">
+            <label for="name">文本框</label><br>
+            <textarea class="form-cotrol" rows="5" cols="30"></textarea>
+        </div>
+    </form>
+</div>
+<h1>复选框和单选框</h1>
+<div class="container">
+    <label for="name">默认的复选框和单选按钮实例</label>
+    <div class="checkbox">
+        <label><input type="checkbox">选项一</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox">选项二</label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input type="radio" name='optionsRadios' id="optionsRadio1" value="option1" checked>选项1
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name='optionsRadios' id="optionsRadio2" value="option2">选项2
+        </label>
+    </div>
+</div>
+
+
+<div class="container">
+    <label for="name">内联的复选框和单选框</label>
+    <div>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1">选项1
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2">选项2
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3">选项3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optionsRadioInline" id="optiondRadio1" value="option1">选项1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optionsRadioInline" id="optionRadio2" value="option2">选项2
+        </label>
+    </div>
+</div>
+<h1>选择框</h1>
+<div class="container">
+    <form role="form">
+        <label>选择列表</label>
+        <div class="form-group">
+            <select class="form-control" style="width: 300px;">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+        </div>
+        <label>多选的选择列表</label>
+        <div class="form-group">
+            <select multiple class="form-control">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+            </select>
+        </div>
+    </form>
+</div>
+<h1>静态控件</h1>
+<div class="container">
+    <form role="form" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <p class="form-control-static ">email@example.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input id="inputPassword" type="password" class="form-control" placeholder="请输入密码">
+            </div>
+        </div>
+
+    </form>
+</div>
+<h1>表单控件状态</h1>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">聚焦</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="focusceInput" value="该输入框获得焦点...">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="disabledInput" class="col-sm-2 control-label">禁用</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="disabledInput" placeholder="该框禁止输入..." disabled>
+        </div>
+    </div>
+
+
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput" class="col-sm-2 control-label">禁用输入（Fieldset disabled）</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="disabledTextInput" placeholder="禁止输入">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="disabledTextInput" class="col-sm-2 control-label">禁用选择菜单（Fieldset disabled）</label>
+            <div class="col-sm-10">
+                <select id="disabledSelect" class="form-control">
+                    <option value="">禁止选择</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <div class="form-group has-success">
+        <label for="inputSuccess" class="col-sm-2 control-label">输入成功</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputSuccess">
+        </div>
+    </div>
+    <div class="form-group has-warning">
+        <label for="inputWarning" class="col-sm-2 control-label">输入警告</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputWarning">
+        </div>
+    </div>
+    <div class="form-group has-error">
+        <label for="inputError" class="col-sm-2 control-label">输入错误</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputError">
+        </div>
+    </div>
+</form>
+
+<form role="form">
+    <div class="form-group">
+        <input type="text" class="form-control input-lg" placeholder=".input-lg">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="默认输入">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control input-sm" placeholder=".input-sm">
+    </div>
+    <div class="form-group">
+        <select class="form-control input-sm">
+            <option value="">.input-sm</option>
+        </select>
+    </div>
+    <div class="form-gorup">
+        <select class="form-control">
+            <option value="">默认选择</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control input-lg">
+            <option value="">.input-lg</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            <input type="text" class="form-control" placeholder=".col-lg-2">
+        </div>
+        <div class="col-lg-3">
+            <input type="text" class="form-control" placeholder="col-lg-3">
+        </div>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" placeholder="col-lg-4">
+        </div>
+    </div>
+</form>
+
+<h1>表单帮助文本</h1>
+<form role="form">
+    <div class="form-group">
+        <span>帮助文本块</span>
+        <input type="text" class="form-control">
+        <span class="help-block">一个较长的帮助文本块，超过一行，需要扩展到下一行</span>
+    </div>
+</form>
+
+<script>
+
+    function createVideo() {
+        var video = document.createElement('video');
+        video.id = 'videoSingleton'
+        video.setAttribute('height', '300px');
+        video.setAttribute('width', '400px');
+        video.setAttribute('controls', 'controls');
+        video.style.display = 'none';
+
+        var source = document.createElement('source');
+        source.id = 'videoSourceSingleton'
+        // source.src = url;
+        video.appendChild(source);
+        player.append(video);
+    }
+    function createAudio() {
+        var audio = document.createElement('audio');
+        audio.id = 'audioSingleton';
+        audio.setAttribute('controls', 'controls');
+        audio.style.display = 'none';
+
+        var source = document.createElement('source');
+        source.id = 'audioSourceSingleton';
+        audio.appendChild(source);
+        player.append(audio);
+    }
+    function createPic() {
+        var image = document.createElement('img');
+        image.id = 'imgSingleton';
+        image.width = 200;
+        image.style.display = 'none';
+        player.append(image);
+    }
+
+
+    createVideo();
+    createAudio();
+    createPic()
+
+    function AutoVideo() {
+
+        var url = null;
+        var fileObj = inputfile.files[0];
+        console.log(fileObj);
+        if (window.createObjectURL != undefined) {
+            url = window.createObjectURL(fileObj);
+        } else if (window.URL != undefined) {
+            url = window.URL.createObjectURL(fileObj);
+        } else if (window.webkitURL != undefined) {
+            url = window.webkitURL.createObjectURL(fileObj);
+        }
+        // console.log(url);
+        // console.log(fileObj.type);
+        // var index = fileObj.name.lastIndexOf('.');
+        // var ext = fileObj.name.substr(index + 1);
+
+        // console.log(ext)
+        var type = fileObj.type;
+        console.log(typeof type);
+        type = type.split('/')[0];
+        console.log(type);
+        if (type == 'video') {
+            videoSingleton.style.display = 'inline-block';
+            audioSingleton.style.display = 'none';
+            imgSingleton.style.display = 'none';
+            videoSourceSingleton.src = url;
+            videoSourceSingleton.type = fileObj.type;
+
+            videoSingleton.load();
+        }
+        if (type == 'audio') {
+            audioSingleton.style.display = 'inline-block';
+            videoSingleton.style.display = 'none';
+            imgSingleton.style.display = 'none';
+            audioSourceSingleton.src = url;
+            audioSourceSingleton.type = fileObj.type;
+
+            audioSingleton.load();
+        }
+        if (type == 'image') {
+            imgSingleton.style.display = 'inline-block';
+            videoSingleton.style.display = 'none';
+            audioSingleton.style.display = 'none';
+            imgSingleton.src = url;
+
+        }
+
+
+
+
+    }
+</script>
 
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jQuery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .mybtn {
+            width: 110px;
+            height: 35px;
+            background: #fff;
+            border: 1px solid #ddd;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+
+        }
+
+        .tooltip-inner {
+            background: tomato;
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: tomato;
+        }
+
+        p {
+            display: none;
+            width: 80px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: '微软雅黑';
+            background: coral;
+            color: white;
+            border-radius: 5px;
+            position: relative;
+            top: -28px;
+            left: 104px;
+        }
+
+        /* 伪类 */
+        p::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: coral;
+            top: 50%;
+            margin-top: -4px;
+            margin-left: 4px;
+            transform: rotate(45deg);
+        }
+
+
+
+        /* .mybtn:hover+p {
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <br><br><br><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="显示左边">Tooltip on
+        left</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top"
+        title="Tooltip on top">Tooltip on top</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+        title="Tooltip on bottom">Tooltip on bottom</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+        title="Tooltip on right">Tooltip on right</button><br><br><br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="mybtn" type="button">Tooltip on left</button>
+    <p>显示在左边</p>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+
+            $('.mybtn').mouseover(function (event) {
+                $('p').fadeIn(300);
+            });
+            $('.mybtn').mouseout(function (event) {
+                $('p').fadeOut(300);
+            });
+        })
+    </script>
+</body>
+
+</html>

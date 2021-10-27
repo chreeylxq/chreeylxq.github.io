@@ -1,0 +1,45 @@
+// 变量
+// 嵌套
+// 伪类
+// 伪元素
+// 媒体查询
+
+// 变量
+@width:600px;
+@color:#987;
+
+.container{
+    width: @width;
+    height: 800px;
+    background: @color;
+
+    // 嵌套
+    header{
+        height: 100px;
+        background: #345;
+    }
+
+    
+    section{
+        height: 400px;
+        background: #456;
+
+        // 伪类
+        &:hover{
+            background: #567;
+        }
+        &::before{
+            content:"";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #123;
+
+        }
+
+        //媒体查询
+        @media screen and (max-width:590px){
+            background: #901;
+        }
+    }
+}

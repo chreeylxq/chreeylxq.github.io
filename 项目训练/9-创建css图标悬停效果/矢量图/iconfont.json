@@ -1,0 +1,51 @@
+{
+  "id": "2875712",
+  "name": "生活",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "354209",
+      "name": "生活服务",
+      "font_class": "iconfontshenghuojiaofei",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "650794",
+      "name": "生活－电",
+      "font_class": "shenghuodian",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "650799",
+      "name": "生活－煤",
+      "font_class": "shenghuomei",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "650800",
+      "name": "生活－水",
+      "font_class": "shenghuoshui",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "7516901",
+      "name": "生活服务",
+      "font_class": "shenghuofuwu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "10268584",
+      "name": "生活服务",
+      "font_class": "shenghuofuwu1",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    }
+  ]
+}

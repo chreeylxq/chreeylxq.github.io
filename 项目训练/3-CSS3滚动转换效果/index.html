@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scroll.css">
+    <title>滚动转换效果</title>
+</head>
+
+<body>
+    <section>
+        <span class="curve">
+            <img src="curve.png" alt="">
+        </span>
+        <span class="content">
+            <h1>SCROLL TRANSFORM</h1>
+        </span>
+    </section>
+</body>
+<script>
+    var span = document.querySelector('.curve');
+    window.addEventListener('scroll', function () {
+
+        var value = window.scrollY;
+        span.style.transform = `scaleY(${1 - value / 700})`;
+    })
+</script>
+
+</html>

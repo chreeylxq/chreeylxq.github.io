@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleParallaxRolling</title>
+    <link rel="stylesheet" href="spr.css">
+</head>
+
+<body>
+    <section>
+        <img src="image/bg.jpg" alt="background" id="bg">
+        <img src="image/moon.png" alt="moon" id="moon">
+        <img src="image/mountain.png" alt="mountain" id="mountain">
+        <img src="image/road.png" alt="road" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+</body>
+<script>
+    function getId(element) {
+        return document.getElementById(element);
+    }
+    let bg = getId('bg');
+    let moon = getId('moon');
+    let mountain = getId('mountain');
+    let road = getId('road');
+
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
+
+        bg.style.top = value * 0.5 + 'px';
+        moon.style.left = -value * 0.5 + 'px';
+        mountain.style.top = -value * 0.15 + 'px';
+        // road.style.top = -value * 0.05 + 'px';
+        text.style.top = value * 0.6 + 'px';
+    })
+</script>
+
+</html>
